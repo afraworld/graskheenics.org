@@ -723,49 +723,7 @@ footer {
   footer { flex-direction: column; height: auto; padding: 1.2rem 1.5rem; gap: 0.5rem; text-align: center; }
 }
 
-/* LANGUAGE SWITCHER */
-.lang-switcher {
-  display: flex;
-  gap: 0;
-  margin-left: 0.8rem;
-}
-.lang-btn {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  background: transparent;
-  border: 1px solid var(--border);
-  border-right: none;
-  padding: 0 0.7rem;
-  height: 30px;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-.lang-btn:last-child { border-right: 1px solid var(--border); }
-.lang-btn:hover { color: var(--accent); border-color: var(--accent); }
-.lang-btn.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
-.lang-drop-btn {
-  display: block; width: 100%; text-align: left;
-  font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em;
-  color: var(--text-dim); background: transparent; border: none;
-  border-bottom: 1px solid var(--border); padding: 0.6rem 1rem;
-  cursor: pointer; transition: all 0.12s;
-}
-.lang-drop-btn:last-child { border-bottom: none; }
-.lang-drop-btn:hover { color: var(--accent); background: var(--accent-dim); }
-.lang-drop-btn.active { color: var(--accent); }
 
-/* RTL support for Arabic */
-[lang="ar"] { direction: rtl; }
-[lang="ar"] .hero-main,
-[lang="ar"] .about-text p,
-[lang="ar"] .book-desc,
-[lang="ar"] .framework-text p,
-[lang="ar"] .contact-intro p { text-align: right; }
-[lang="ar"] .sec-tag { margin-left: 0; margin-right: auto; }
-[lang="ar"] .collab-arrow { transform: scaleX(-1); }
 </style>
 </head>
 <body>
@@ -774,26 +732,12 @@ footer {
   <a class="nav-logo" href="https://graskheenics.org" style="display:flex;align-items:center;gap:0.6rem;"><img src="favicon-32.png" style="width:20px;height:20px;object-fit:contain;" alt="Graskheenics icon">TAFHEENA</a>
   <span class="nav-id">PREPRINT · FEB 2026 · GRASMAN</span>
   <ul class="nav-links">
-    <li><a href="#framework" data-i18n="nav_framework">Framework</a></li>
-    <li><a href="#about" data-i18n="nav_about">Researcher</a></li>
-    <li><a href="#preprint" data-i18n="nav_preprint">Preprint</a></li>
-    <li><a href="#book" data-i18n="nav_book">Book</a></li>
-    <li><a href="#writing" data-i18n="nav_writing">Writing</a></li><li><a href="#contact" data-i18n="nav_collab">Collaborate</a></li>
+    <li><a href="#framework">Framework</a></li>
+    <li><a href="#about">Researcher</a></li>
+    <li><a href="#preprint">Preprint</a></li>
+    <li><a href="#book">Book</a></li>
+    <li><a href="#writing">Writing</a></li><li><a href="#contact">Collaborate</a></li>
   </ul>
-  <div class="lang-switcher" style="position:relative;">
-    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
-    <button class="lang-btn" onclick="setLang('ja')" id="btn-ja">日本語</button>
-    <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">العربية</button>
-    <button class="lang-btn" onclick="setLang('ru')" id="btn-ru">Рус</button>
-    <button class="lang-btn" id="btn-more" onclick="toggleLangMenu()" style="border-right:1px solid var(--border); padding:0 0.8rem;">▾ More</button>
-    <div id="lang-menu" style="display:none; position:absolute; top:34px; right:0; background:var(--panel); border:1px solid var(--border); z-index:999; min-width:130px;">
-      <button onclick="setLang('ko');toggleLangMenu()" class="lang-drop-btn" id="btn-ko">한국어</button>
-      <button onclick="setLang('de');toggleLangMenu()" class="lang-drop-btn" id="btn-de">Deutsch</button>
-      <button onclick="setLang('zh');toggleLangMenu()" class="lang-drop-btn" id="btn-zh">中文</button>
-      <button onclick="setLang('fr');toggleLangMenu()" class="lang-drop-btn" id="btn-fr">Français</button>
-      <button onclick="setLang('es');toggleLangMenu()" class="lang-drop-btn" id="btn-es">Español</button>
-    </div>
-  </div>
 </nav>
 
 <!-- HERO -->
@@ -801,37 +745,37 @@ footer {
   <div class="hero-main">
     <div class="hero-sys">
       <div class="sys-dot"></div>
-      <span data-i18n="hero_sys">BOUNDARY-STATE MODEL · CONTROL HANDOVER · IRREVERSIBLE CONSTRAINT</span>
+      <span>BOUNDARY-STATE MODEL · CONTROL HANDOVER · IRREVERSIBLE CONSTRAINT</span>
     </div>
-    <h1 class="hero-title" data-i18n="hero_title">When systems<br>
+    <h1 class="hero-title">When systems<br>
       <span class="hero-title-accent">hand over control</span><br>
       to survive.</h1>
-    <p class="hero-sub-line"><span data-i18n="hero_sub">// A cross-disciplinary framework for human action under perceived irreversibility</span></p>
-    <p class="hero-desc" data-i18n="hero_desc">Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.</p>
+    <p class="hero-sub-line"><span>// A cross-disciplinary framework for human action under perceived irreversibility</span></p>
+    <p class="hero-desc">Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.</p>
     <div class="hero-ctas">
-      <a href="https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary" data-i18n="btn_download">↓ Download Preprint</a>
-      <a href="https://zenodo.org/records/18666477" target="_blank" class="btn btn-ghost" data-i18n="btn_explore">Explore the model ↗</a>
-      <a href="mailto:contact@graskheenics.org" class="btn btn-ghost" data-i18n="btn_collab">Collaborate →</a>
+      <a href="https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download Preprint</a>
+      <a href="https://zenodo.org/records/18666477" target="_blank" class="btn btn-ghost">Explore the model ↗</a>
+      <a href="mailto:contact@graskheenics.org" class="btn btn-ghost">Collaborate →</a>
     </div>
   </div>
 
   <div class="hero-side">
     <div class="side-block">
-      <div class="side-label" data-i18n="side_status">Status</div>
-      <div class="side-val accent" data-i18n="side_status_val">● Preprint Live · Feb 2026</div>
+      <div class="side-label">Status</div>
+      <div class="side-val accent">● Preprint Live · Feb 2026</div>
     </div>
     <div class="side-block">
-      <div class="side-label" data-i18n="side_arch">Control Architecture</div>
+      <div class="side-label">Control Architecture</div>
       <div class="state-flow">
-        <div class="state-node" data-i18n="state_h1">H1 — Deliberative Control</div>
-        <div class="state-arrow" data-i18n="state_arr1">↓ irreversibility threshold</div>
-        <div class="state-node active" data-i18n="state_h3">H3 — Arbitration Layer</div>
-        <div class="state-arrow" data-i18n="state_arr2">↓ handover event</div>
-        <div class="state-node" data-i18n="state_h2">H2 — Procedural Continuity</div>
+        <div class="state-node">H1 — Deliberative Control</div>
+        <div class="state-arrow">↓ irreversibility threshold</div>
+        <div class="state-node active">H3 — Arbitration Layer</div>
+        <div class="state-arrow">↓ handover event</div>
+        <div class="state-node">H2 — Procedural Continuity</div>
       </div>
     </div>
     <div class="side-block">
-      <div class="side-label" data-i18n="side_criteria">4 Operational Criteria</div>
+      <div class="side-label">4 Operational Criteria</div>
       <div class="side-val" style="line-height:2.2; font-size:0.72rem;">
         <span style="color:var(--accent)">IC</span> · Irreversible Consequence<br>
         <span style="color:var(--accent)">TP</span> · Time Pressure<br>
@@ -840,9 +784,9 @@ footer {
       </div>
     </div>
     <div class="side-block">
-      <div class="side-label" data-i18n="side_collab">Open for Collaboration</div>
+      <div class="side-label">Open for Collaboration</div>
       <div class="side-val" style="line-height:2; font-size:0.7rem; color:var(--text);">
-        <span data-i18n="side_collab_list">Simulation research<br>Safety-critical systems<br>Stress neuroscience<br>Human factors / HRI<br>Aviation &amp; surgical studies</span>
+        <span>Simulation research<br>Safety-critical systems<br>Stress neuroscience<br>Human factors / HRI<br>Aviation &amp; surgical studies</span>
       </div>
     </div>
   </div>
@@ -853,15 +797,15 @@ footer {
   <div class="container">
     <div class="sec-header reveal">
       <span class="sec-num">01</span>
-      <h2 class="sec-title" data-i18n="sec_framework">The <em>Tafheena</em> Framework</h2>
+      <h2 class="sec-title">The <em>Tafheena</em> Framework</h2>
       <span class="sec-tag">Conceptual Model</span>
     </div>
 
     <div class="framework-layout reveal">
       <div class="framework-text">
-        <p data-i18n="fw_p1">Existing models describe either optimized performance (flow, NDM) or system collapse (freeze, dissociation). The transitional boundary between these states — where deliberative control yields while action coherence persists — lacks a unified description.</p>
-        <p data-i18n="fw_p2">Tafheena proposes a three-layer control handover architecture: a deliberative control layer (H1) governing optimization; a procedural continuity layer (H2) enabling rapid embodied execution; and an arbitration layer (H3) that monitors for perceived irreversibility and redistributes control authority.</p>
-        <p data-i18n="fw_p3">Perceived irreversibility — not danger alone — functions as the weighting signal. When the system interprets a situation as approaching a point of no return, H3 shifts dominance to H2, preserving trajectory coherence before explicit reasoning can respond.</p>
+        <p>Existing models describe either optimized performance (flow, NDM) or system collapse (freeze, dissociation). The transitional boundary between these states — where deliberative control yields while action coherence persists — lacks a unified description.</p>
+        <p>Tafheena proposes a three-layer control handover architecture: a deliberative control layer (H1) governing optimization; a procedural continuity layer (H2) enabling rapid embodied execution; and an arbitration layer (H3) that monitors for perceived irreversibility and redistributes control authority.</p>
+        <p>Perceived irreversibility — not danger alone — functions as the weighting signal. When the system interprets a situation as approaching a point of no return, H3 shifts dominance to H2, preserving trajectory coherence before explicit reasoning can respond.</p>
 
         <div class="spectrum-block">
           <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); margin-bottom:1rem;">Performance State Continuum</div>
@@ -870,8 +814,8 @@ footer {
             <div class="spectrum-marker"></div>
           </div>
           <div class="spectrum-pts">
-            <span data-i18n="fw_flow">Flow — Optimization</span>
-            <span data-i18n="fw_freeze">Freeze — Collapse</span>
+            <span>Flow — Optimization</span>
+            <span>Freeze — Collapse</span>
           </div>
         </div>
       </div>
@@ -916,23 +860,23 @@ footer {
     <div class="criteria-grid reveal" style="transition-delay:0.15s;">
       <div class="crit">
         <div class="crit-code">IC</div>
-        <div class="crit-name" data-i18n="crit_ic_name">Irreversible Consequence</div>
-        <div class="crit-desc" data-i18n="crit_ic_desc">Actor perceives meaningful loss of reset options. Not objective danger — subjective inference of diminishing corrective margin.</div>
+        <div class="crit-name">Irreversible Consequence</div>
+        <div class="crit-desc">Actor perceives meaningful loss of reset options. Not objective danger — subjective inference of diminishing corrective margin.</div>
       </div>
       <div class="crit">
         <div class="crit-code">TP</div>
-        <div class="crit-name" data-i18n="crit_tp_name">Time Pressure</div>
-        <div class="crit-desc" data-i18n="crit_tp_desc">Decision window compressed below normal deliberative processing capacity. Analytical reasoning becomes too slow relative to stakes.</div>
+        <div class="crit-name">Time Pressure</div>
+        <div class="crit-desc">Decision window compressed below normal deliberative processing capacity. Analytical reasoning becomes too slow relative to stakes.</div>
       </div>
       <div class="crit">
         <div class="crit-code">ER↓</div>
-        <div class="crit-name" data-i18n="crit_er_name">Reduced Explicit Reasoning</div>
-        <div class="crit-desc" data-i18n="crit_er_desc">Verbalizable deliberation attenuated during action execution. Explanation follows retrospectively — not concurrently.</div>
+        <div class="crit-name">Reduced Explicit Reasoning</div>
+        <div class="crit-desc">Verbalizable deliberation attenuated during action execution. Explanation follows retrospectively — not concurrently.</div>
       </div>
       <div class="crit">
         <div class="crit-code">AC↑</div>
-        <div class="crit-name" data-i18n="crit_ac_name">Preserved Action Continuity</div>
-        <div class="crit-desc" data-i18n="crit_ac_desc">Motor and behavioral coherence remain intact or enhanced. Distinguishes Tafheena from freeze and collapse responses.</div>
+        <div class="crit-name">Preserved Action Continuity</div>
+        <div class="crit-desc">Motor and behavioral coherence remain intact or enhanced. Distinguishes Tafheena from freeze and collapse responses.</div>
       </div>
     </div>
   </div>
@@ -943,7 +887,7 @@ footer {
   <div class="container">
     <div class="sec-header reveal">
       <span class="sec-num">02</span>
-      <h2 class="sec-title" data-i18n="sec_about">Researcher — <em>Yuliana Grasman</em></h2>
+      <h2 class="sec-title">Researcher — <em>Yuliana Grasman</em></h2>
       <span class="sec-tag">Independent Research</span>
     </div>
 
@@ -970,17 +914,17 @@ footer {
 
       <div class="about-text">
 
-        <p style="font-size:1.05rem; color:var(--text-hi); line-height:1.8;" data-i18n="bio_intro">Yuliana Grasman is a framework developer, author, and researcher specializing in internal navigation, decision architecture, and post-pressure adaptation. She is the originator of <strong style="color:var(--accent); font-weight:400;">Graskheenics</strong> and the Survival Architecture framework, which explore how human agents stabilize decision-making and maintain internal continuity under conditions of irreversible consequence and high structural pressure.</p>
+        <p style="font-size:1.05rem; color:var(--text-hi); line-height:1.8;">Yuliana Grasman is a framework developer, author, and researcher specializing in internal navigation, decision architecture, and post-pressure adaptation. She is the originator of <strong style="color:var(--accent); font-weight:400;">Graskheenics</strong> and the Survival Architecture framework, which explore how human agents stabilize decision-making and maintain internal continuity under conditions of irreversible consequence and high structural pressure.</p>
 
         <div style="margin:1.8rem 0; padding-bottom:1.8rem; border-bottom:1px solid var(--border);">
           <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:0.8rem;">// Lineage &amp; Foundational Discipline</div>
-          <p data-i18n="bio_lineage">Grasman's research is built upon a multi-decade lineage of physiological and psychological discipline. Her methodology is rooted in a 1990 clinical "Self-Regulation" curriculum established by her father, a physical therapy specialist. This inherited discipline provided a biological default for internal stabilization, which Grasman evolved through thirty years of application in extreme operational and cultural environments.</p>
+          <p>Grasman's research is built upon a multi-decade lineage of physiological and psychological discipline. Her methodology is rooted in a 1990 clinical "Self-Regulation" curriculum established by her father, a physical therapy specialist. This inherited discipline provided a biological default for internal stabilization, which Grasman evolved through thirty years of application in extreme operational and cultural environments.</p>
         </div>
 
         <div style="margin:1.8rem 0; padding-bottom:1.8rem; border-bottom:1px solid var(--border);">
           <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:0.8rem;">// Lived Extraction &amp; Phenomenological Data</div>
-          <p data-i18n="bio_lived">Her primary research output, the Tafheena framework, is a lived extraction derived from over a decade of participant observation in Gulf motorsports (2012–2023). Documented in regional media — Khaleej Times (2017), Bazaar (2018), Lovin Dubai (2020) — Grasman, professionally known as <strong style="color:var(--text-hi); font-weight:400;">Afra Drift</strong>, occupied a unique vantage point as a pioneer for women in Middle Eastern motorsport during the pivotal 2017 Saudi Royal Decree and the 2018 lifting of the driving ban.</p>
-          <p style="margin-top:1rem;" data-i18n="bio_accident">This period provided critical data on human navigation during structural and social collapse. The concept of "Internal Continuity" was validated through Grasman's survival and recovery from a high-impact 2017 vehicle accident — the catalyst for formalizing the difference between optimization (machine logic) and survivability (human embodied logic).</p>
+          <p>Her primary research output, the Tafheena framework, is a lived extraction derived from over a decade of participant observation in Gulf motorsports (2012–2023). Documented in regional media — Khaleej Times (2017), Bazaar (2018), Lovin Dubai (2020) — Grasman, professionally known as <strong style="color:var(--text-hi); font-weight:400;">Afra Drift</strong>, occupied a unique vantage point as a pioneer for women in Middle Eastern motorsport during the pivotal 2017 Saudi Royal Decree and the 2018 lifting of the driving ban.</p>
+          <p style="margin-top:1rem;">This period provided critical data on human navigation during structural and social collapse. The concept of "Internal Continuity" was validated through Grasman's survival and recovery from a high-impact 2017 vehicle accident — the catalyst for formalizing the difference between optimization (machine logic) and survivability (human embodied logic).</p>
         </div>
 
         <div style="margin:1.8rem 0; padding-bottom:1.8rem; border-bottom:1px solid var(--border);">
@@ -988,22 +932,22 @@ footer {
           <div style="display:flex; flex-direction:column; gap:0.5rem;">
             <div style="padding:0.9rem 1.2rem; border:1px solid var(--border); display:flex; gap:1rem; align-items:baseline;">
               <span style="font-family:var(--mono); font-size:0.65rem; color:var(--accent); min-width:120px; flex-shrink:0;">Tafheena</span>
-              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;" data-i18n="concept_tafheena">A boundary condition where action persists despite the failure of explanatory cognition.</span>
+              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;">A boundary condition where action persists despite the failure of explanatory cognition.</span>
             </div>
             <div style="padding:0.9rem 1.2rem; border:1px solid var(--border); border-top:none; display:flex; gap:1rem; align-items:baseline;">
               <span style="font-family:var(--mono); font-size:0.65rem; color:var(--accent); min-width:120px; flex-shrink:0;">The Dangerous Middle</span>
-              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;" data-i18n="concept_dm">A risk state where humans attempt to imitate reversible machine optimization in irreversible physical environments.</span>
+              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;">A risk state where humans attempt to imitate reversible machine optimization in irreversible physical environments.</span>
             </div>
             <div style="padding:0.9rem 1.2rem; border:1px solid var(--border); border-top:none; display:flex; gap:1rem; align-items:baseline;">
               <span style="font-family:var(--mono); font-size:0.65rem; color:var(--accent); min-width:120px; flex-shrink:0;">GRASCODE™</span>
-              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;" data-i18n="concept_grascode">An operational logic for reducing decision friction and recalibrating direction post-pressure.</span>
+              <span style="font-size:0.88rem; color:var(--text); line-height:1.6;">An operational logic for reducing decision friction and recalibrating direction post-pressure.</span>
             </div>
           </div>
         </div>
 
         <div class="method-note">
           <div class="method-note-label">// epistemic_note</div>
-          <p data-i18n="epistemic">Tafheena was not derived from existing frameworks but retrospectively positioned in relation to them. The observational corpus is single-participant and may reflect individual training history. The work presents a provisional hypothesis-generating model, not a validated mechanism. Empirical validation across independent participants and domains is the explicit goal.</p>
+          <p>Tafheena was not derived from existing frameworks but retrospectively positioned in relation to them. The observational corpus is single-participant and may reflect individual training history. The work presents a provisional hypothesis-generating model, not a validated mechanism. Empirical validation across independent participants and domains is the explicit goal.</p>
         </div>
       </div>
     </div>
@@ -1016,15 +960,15 @@ footer {
 
     <div class="sec-header reveal">
       <span class="sec-num">03</span>
-      <h2 class="sec-title" data-i18n="sec_preprint">Academic <em>Preprints</em></h2>
+      <h2 class="sec-title">Academic <em>Preprints</em></h2>
       <span class="sec-tag">CC BY-NC-ND 4.0 · Zenodo</span>
     </div>
 
     <!-- CONCEPT STATEMENT -->
     <div class="reveal" style="margin-bottom:3rem; padding:2rem 2.5rem; border:1px solid var(--border); background:var(--panel); border-left:3px solid var(--accent);">
       <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--accent); margin-bottom:0.8rem;">// concept statement</div>
-      <p style="font-size:1.1rem; line-height:1.75; color:var(--text-hi); font-style:italic; margin-bottom:0.5rem;" data-i18n="concept_stmt">A new architecture of human decision stability under irreversible conditions.</p>
-      <p style="font-size:0.88rem; line-height:1.75; color:var(--text);" data-i18n="concept_body">Two interconnected frameworks — Tafheena and GRASCODE — form a complete model of human decision behavior under extreme pressure: one describing the boundary event, the other mapping the operational sequence that follows. Together they address <em>decision making under pressure</em>, <em>cognitive control transition</em>, and <em>structured action in irreversible environments</em> across aviation, emergency response, and human factors research.</p>
+      <p style="font-size:1.1rem; line-height:1.75; color:var(--text-hi); font-style:italic; margin-bottom:0.5rem;">A new architecture of human decision stability under irreversible conditions.</p>
+      <p style="font-size:0.88rem; line-height:1.75; color:var(--text);">Two interconnected frameworks — Tafheena and GRASCODE — form a complete model of human decision behavior under extreme pressure: one describing the boundary event, the other mapping the operational sequence that follows. Together they address <em>decision making under pressure</em>, <em>cognitive control transition</em>, and <em>structured action in irreversible environments</em> across aviation, emergency response, and human factors research.</p>
     </div>
 
     <!-- TAB NAVIGATION -->
@@ -1054,7 +998,7 @@ footer {
             <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; color:var(--text-dim);">February 2026</div>
           </div>
           <div class="preprint-title">Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint</div>
-          <p class="preprint-abstract" data-i18n="abs_tafheena">Integrating perspectives from control-theoretic accounts of motor regulation, stress neuroscience, naturalistic decision-making, and safety-critical engineering runtime assurance architectures, this paper proposes Tafheena as a conceptual arbitration layer describing how control authority transitions when situations approach irreversible constraint. The model defines operational characteristics, differentiates from related constructs, and outlines testable hypotheses for empirical investigation.</p>
+          <p class="preprint-abstract">Integrating perspectives from control-theoretic accounts of motor regulation, stress neuroscience, naturalistic decision-making, and safety-critical engineering runtime assurance architectures, this paper proposes Tafheena as a conceptual arbitration layer describing how control authority transitions when situations approach irreversible constraint. The model defines operational characteristics, differentiates from related constructs, and outlines testable hypotheses for empirical investigation.</p>
           <div class="preprint-meta">
             <div class="meta-pair"><div class="meta-k">Author</div><div class="meta-v">Yuliana Grasman</div></div>
             <div class="meta-pair"><div class="meta-k">Date</div><div class="meta-v">February 2026</div></div>
@@ -1095,8 +1039,8 @@ footer {
             <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--green); border:1px solid rgba(0,232,122,0.3); padding:0.2rem 0.6rem;">● New</div>
           </div>
           <div class="preprint-title" style="color:var(--text-hi);">GRASCODE: An Operational Architecture for Structured Decision Sequencing Following Boundary-State Control</div>
-          <p class="preprint-abstract" data-i18n="abs_grascode1">GRASCODE is a structured decision-architecture framework designed to explain and support human action in environments where consequences are irreversible and time is limited. Traditional models of decision-making often assume stable conditions and sufficient time for analytical evaluation. However, real-world high-stakes environments — such as aviation incidents, emergency response, extreme operations, and survival situations — frequently disrupt deliberate reasoning and force rapid cognitive transitions.</p>
-          <p class="preprint-abstract" style="margin-top:0.8rem;" data-i18n="abs_grascode2">The architecture identifies key phases including pattern recognition, mechanism identification, choice formation, idling stabilization, activation threshold crossing, responsibility commitment, decision execution, and transmission of consequences. Together these stages form a continuous control sequence that maintains functional stability when time pressure, uncertainty, and irreversible outcomes challenge conventional decision processes.</p>
+          <p class="preprint-abstract">GRASCODE is a structured decision-architecture framework designed to explain and support human action in environments where consequences are irreversible and time is limited. Traditional models of decision-making often assume stable conditions and sufficient time for analytical evaluation. However, real-world high-stakes environments — such as aviation incidents, emergency response, extreme operations, and survival situations — frequently disrupt deliberate reasoning and force rapid cognitive transitions.</p>
+          <p class="preprint-abstract" style="margin-top:0.8rem;">The architecture identifies key phases including pattern recognition, mechanism identification, choice formation, idling stabilization, activation threshold crossing, responsibility commitment, decision execution, and transmission of consequences. Together these stages form a continuous control sequence that maintains functional stability when time pressure, uncertainty, and irreversible outcomes challenge conventional decision processes.</p>
           <div class="preprint-meta">
             <div class="meta-pair"><div class="meta-k">Author</div><div class="meta-v">Yuliana Grasman</div></div>
             <div class="meta-pair"><div class="meta-k">Date</div><div class="meta-v">March 4, 2026</div></div>
@@ -1140,7 +1084,7 @@ footer {
   <div class="container">
     <div class="sec-header reveal">
       <span class="sec-num">04</span>
-      <h2 class="sec-title" data-i18n="sec_books">Books — <em>Survival Architecture Series</em></h2>
+      <h2 class="sec-title">Books — <em>Survival Architecture Series</em></h2>
       <span class="sec-tag">AfraWorld / Graskheenics</span>
     </div>
 
@@ -1308,7 +1252,7 @@ footer {
   <div class="container">
     <div class="sec-header reveal">
       <span class="sec-num">05</span>
-      <h2 class="sec-title" data-i18n="sec_writing">Writing on <em>Medium</em></h2>
+      <h2 class="sec-title">Writing on <em>Medium</em></h2>
       <span class="sec-tag">Latest Post</span>
     </div>
 
@@ -1358,14 +1302,14 @@ footer {
   <div class="container">
     <div class="sec-header reveal">
       <span class="sec-num">06</span>
-      <h2 class="sec-title" data-i18n="sec_contact">Research <em>Collaboration</em></h2>
+      <h2 class="sec-title">Research <em>Collaboration</em></h2>
       <span class="sec-tag">Open Invitation</span>
     </div>
 
     <div class="contact-layout reveal">
       <div class="contact-intro">
-        <p data-i18n="contact_p1">Tafheena is an open hypothesis. The framework requires empirical validation across independent participants, domains, and measurement modalities. If you work in simulation research, safety-critical systems, neurocognition, or human factors — and you see a methodological connection — direct contact is welcome.</p>
-        <p data-i18n="contact_p2">Particularly interested in collaborators who can bring controlled experimental paradigms to the behavioral signatures and neurocognitive predictions outlined in the preprint.</p>
+        <p>Tafheena is an open hypothesis. The framework requires empirical validation across independent participants, domains, and measurement modalities. If you work in simulation research, safety-critical systems, neurocognition, or human factors — and you see a methodological connection — direct contact is welcome.</p>
+        <p>Particularly interested in collaborators who can bring controlled experimental paradigms to the behavioral signatures and neurocognitive predictions outlined in the preprint.</p>
         <div style="margin-top:2rem;">
           <a href="mailto:contact@graskheenics.org" class="contact-row">
             <span class="cr-key">Email</span>
@@ -1398,12 +1342,12 @@ footer {
           </a>
         </div>
         <div class="collab-header">// priority_collaboration_areas</div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col1">Simulator-based driving or aviation studies measuring control-transition signatures</div></div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col2">Neurophysiology of prefrontal-to-procedural transitions under acute stress</div></div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col3">Human factors in surgical or emergency response environments</div></div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col4">Human-AI interaction and failover recognition system design</div></div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col5">Cross-cultural validation of boundary-state phenomena</div></div>
-        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text" data-i18n="col6">Operationalized comparison with flow, RPD, and freeze constructs</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Simulator-based driving or aviation studies measuring control-transition signatures</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Neurophysiology of prefrontal-to-procedural transitions under acute stress</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Human factors in surgical or emergency response environments</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Human-AI interaction and failover recognition system design</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Cross-cultural validation of boundary-state phenomena</div></div>
+        <div class="collab-item"><span class="collab-arrow">→</span><div class="collab-text">Operationalized comparison with flow, RPD, and freeze constructs</div></div>
       </div>
     </div>
   </div>
@@ -1417,494 +1361,33 @@ footer {
 <div class="ticker">
   <div class="ticker-inner">
     <span class="ticker-item"><span>TAFHEENA</span>Boundary-state model · Control handover under irreversible constraint</span>
+    <span class="ticker-item"><span>GRASCODE</span>Operational architecture for structured decision sequencing</span>
     <span class="ticker-item"><span>H3</span>Arbitration Layer · Salience / Irreversibility Gate</span>
     <span class="ticker-item"><span>CRITERIA</span>IC + TP + ER↓ + AC↑ = Tafheena-like episode</span>
     <span class="ticker-item"><span>RTA</span>Runtime assurance analogy · Sha (2001) · Hobbs &amp; Hainline (2021)</span>
     <span class="ticker-item"><span>COLLAB</span>Seeking empirical validation partners across domains</span>
-    <span class="ticker-item"><span>PREPRINT</span>February 2026 · CC BY-NC-ND 4.0 · Yuliana Grasman</span>
     <span class="ticker-item"><span>TAFHEENA</span>Boundary-state model · Control handover under irreversible constraint</span>
+    <span class="ticker-item"><span>GRASCODE</span>Operational architecture for structured decision sequencing</span>
     <span class="ticker-item"><span>H3</span>Arbitration Layer · Salience / Irreversibility Gate</span>
     <span class="ticker-item"><span>CRITERIA</span>IC + TP + ER↓ + AC↑ = Tafheena-like episode</span>
     <span class="ticker-item"><span>RTA</span>Runtime assurance analogy · Sha (2001) · Hobbs &amp; Hainline (2021)</span>
     <span class="ticker-item"><span>COLLAB</span>Seeking empirical validation partners across domains</span>
-    <span class="ticker-item"><span>PREPRINT</span>February 2026 · CC BY-NC-ND 4.0 · Yuliana Grasman</span>
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Reveal on scroll — visible by default, animate if JS loads
+<script>
+// Reveal on scroll
 document.body.classList.add("js-loaded");
-const reveals = document.querySelectorAll(".reveal");
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+var reveals = document.querySelectorAll(".reveal");
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.05, rootMargin: "0px 0px -20px 0px" });
-reveals.forEach(r => obs.observe(r));
-setTimeout(() => { document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible")); }, 600);
+reveals.forEach(function(r) { obs.observe(r); });
+setTimeout(function() {
+  document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
+}, 600);
 </script>
 
-<script>
-// Language switcher
-var T = {
-  en: {
-    hero_sys:"BOUNDARY-STATE MODEL · CONTROL HANDOVER · IRREVERSIBLE CONSTRAINT",
-    hero_title:"When systems<br>\n      <span class=\"hero-title-accent\">hand over control</span><br>\n      to survive.",
-    hero_sub:"// A cross-disciplinary framework for human action under perceived irreversibility",
-    hero_desc:"Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.",
-    btn_download:"↓ Download Preprint\", btn_explore:\"Explore the model ↗\", btn_collab:\"Collaborate →",
-    nav_framework:"Framework\", nav_about:\"Researcher\", nav_preprint:\"Preprint",
-    nav_book:"Book\", nav_writing:\"Writing\", nav_collab:\"Collaborate",
-    sec_framework:"The <em>Tafheena<\/em> Framework\", sec_about:\"Researcher — <em>Yuliana Grasman<\/em>",
-    sec_preprint:"Academic <em>Preprints<\/em>\", sec_books:\"Books — <em>Survival Architecture Series<\/em>",
-    sec_writing:"Writing on <em>Medium<\/em>\", sec_contact:\"Research <em>Collaboration<\/em>",
-    side_status:"Status\", side_status_val:\"● Preprint Live · Feb 2026\", side_arch:\"Control Architecture",
-    state_h1:"H1 — Deliberative Control\", state_arr1:\"↓ irreversibility threshold",
-    state_h3:"H3 — Arbitration Layer\", state_arr2:\"↓ handover event\", state_h2:\"H2 — Procedural Continuity",
-    side_criteria:"4 Operational Criteria\", side_collab:\"Open for Collaboration",
-    side_collab_list:"Simulation research<br>Safety-critical systems<br>Stress neuroscience<br>Human factors / HRI<br>Aviation & surgical studies",
-    fw_p1:"Existing models describe either optimized performance (flow, NDM) or system collapse (freeze, dissociation). The transitional boundary between these states — where deliberative control yields while action coherence persists — lacks a unified description.",
-    fw_p2:"Tafheena proposes a three-layer control handover architecture: a deliberative control layer (H1) governing optimization; a procedural continuity layer (H2) enabling rapid embodied execution; and an arbitration layer (H3) that monitors for perceived irreversibility and redistributes control authority.",
-    fw_p3:"Perceived irreversibility — not danger alone — functions as the weighting signal. When the system interprets a situation as approaching a point of no return, H3 shifts dominance to H2, preserving trajectory coherence before explicit reasoning can respond.",
-    fw_flow:"Flow — Optimization\", fw_freeze:\"Freeze — Collapse",
-    crit_ic_name:"Irreversible Consequence\", crit_ic_desc:\"Actor perceives meaningful loss of reset options. Not objective danger — subjective inference of diminishing corrective margin.",
-    crit_tp_name:"Time Pressure\", crit_tp_desc:\"Decision window compressed below normal deliberative processing capacity. Analytical reasoning becomes too slow relative to stakes.",
-    crit_er_name:"Reduced Explicit Reasoning\", crit_er_desc:\"Verbalizable deliberation attenuated during action execution. Explanation follows retrospectively — not concurrently.",
-    crit_ac_name:"Preserved Action Continuity\", crit_ac_desc:\"Motor and behavioral coherence remain intact or enhanced. Distinguishes Tafheena from freeze and collapse responses.",
-    bio_intro:"Yuliana Grasman is a framework developer, author, and researcher specializing in internal navigation, decision architecture, and post-pressure adaptation. She is the originator of <strong style=\"color:var(--accent); font-weight:400;\">Graskheenics</strong> and the Survival Architecture framework, which explore how human agents stabilize decision-making and maintain internal continuity under conditions of irreversible consequence and high structural pressure.",
-    bio_lineage:"Grasman's research is built upon a multi-decade lineage of physiological and psychological discipline. Her methodology is rooted in a 1990 clinical \"Self-Regulation\" curriculum established by her father, a physical therapy specialist. This inherited discipline provided a biological default for internal stabilization, which Grasman evolved through thirty years of application in extreme operational and cultural environments.",
-    bio_lived:"Her primary research output, the Tafheena framework, is a lived extraction derived from over a decade of participant observation in Gulf motorsports (2012–2023). Documented in regional media — Khaleej Times (2017), Bazaar (2018), Lovin Dubai (2020) — Grasman, professionally known as <strong style=\"color:var(--text-hi); font-weight:400;\">Afra Drift</strong>, occupied a unique vantage point as a pioneer for women in Middle Eastern motorsport during the pivotal 2017 Saudi Royal Decree and the 2018 lifting of the driving ban.",
-    bio_accident:"This period provided critical data on human navigation during structural and social collapse. The concept of \"Internal Continuity\" was validated through Grasman's survival and recovery from a high-impact 2017 vehicle accident — the catalyst for formalizing the difference between optimization (machine logic) and survivability (human embodied logic).",
-    concept_tafheena:"A boundary condition where action persists despite the failure of explanatory cognition.",
-    concept_dm:"A risk state where humans attempt to imitate reversible machine optimization in irreversible physical environments.",
-    concept_grascode:"An operational logic for reducing decision friction and recalibrating direction post-pressure.",
-    epistemic:"Tafheena was not derived from existing frameworks but retrospectively positioned in relation to them. The observational corpus is single-participant and may reflect individual training history. The work presents a provisional hypothesis-generating model, not a validated mechanism. Empirical validation across independent participants and domains is the explicit goal.",
-    concept_stmt:"A new architecture of human decision stability under irreversible conditions.",
-    concept_body:"Two interconnected frameworks — Tafheena and GRASCODE — form a complete model of human decision behavior under extreme pressure: one describing the boundary event, the other mapping the operational sequence that follows. Together they address <em>decision making under pressure<\/em>, <em>cognitive control transition<\/em>, and <em>structured action in irreversible environments<\/em> across aviation, emergency response, and human factors research.",
-    abs_tafheena:"Integrating perspectives from control-theoretic accounts of motor regulation, stress neuroscience, naturalistic decision-making, and safety-critical engineering runtime assurance architectures, this paper proposes Tafheena as a conceptual arbitration layer describing how control authority transitions when situations approach irreversible constraint. The model defines operational characteristics, differentiates from related constructs, and outlines testable hypotheses for empirical investigation.",
-    abs_grascode1:"GRASCODE is a structured decision-architecture framework designed to explain and support human action in environments where consequences are irreversible and time is limited. Traditional models of decision-making often assume stable conditions and sufficient time for analytical evaluation. However, real-world high-stakes environments — such as aviation incidents, emergency response, extreme operations, and survival situations — frequently disrupt deliberate reasoning and force rapid cognitive transitions.",
-    abs_grascode2:"The architecture identifies key phases including pattern recognition, mechanism identification, choice formation, idling stabilization, activation threshold crossing, responsibility commitment, decision execution, and transmission of consequences. Together these stages form a continuous control sequence that maintains functional stability when time pressure, uncertainty, and irreversible outcomes challenge conventional decision processes.",
-    contact_p1:"Tafheena is an open hypothesis. The framework requires empirical validation across independent participants, domains, and measurement modalities. If you work in simulation research, safety-critical systems, neurocognition, or human factors — and you see a methodological connection — direct contact is welcome.",
-    contact_p2:"Particularly interested in collaborators who can bring controlled experimental paradigms to the behavioral signatures and neurocognitive predictions outlined in the preprint.",
-    col1:"Simulator-based driving or aviation studies measuring control-transition signatures",
-    col2:"Neurophysiology of prefrontal-to-procedural transitions under acute stress",
-    col3:"Human factors in surgical or emergency response environments",
-    col4:"Human-AI interaction and failover recognition system design",
-    col5:"Cross-cultural validation of boundary-state phenomena",
-  },
-  ru: {
-    hero_sys:"МОДЕЛЬ ГРАНИЧНОГО СОСТОЯНИЯ · ПЕРЕДАЧА УПРАВЛЕНИЯ · НЕОБРАТИМЫЕ ОГРАНИЧЕНИЯ",
-    hero_title:"Когда системы<br>\n      <span class=\"hero-title-accent\">передают управление</span><br>\n      чтобы выжить.",
-    hero_sub:"// Междисциплинарная модель действий человека в условиях воспринимаемой необратимости",
-    hero_desc:"Тафхина предлагает функциональное описание переходного режима, в котором обдуманное познание ослабевает, а адаптивное действие продолжается — по аналогии с механизмом переключения в системах безопасности. Расположенная между состоянием потока и заморозкой, она описывает этот переход как событие арбитража управления, а не инстинкт.",
-    btn_download:"↓ Скачать препринт\", btn_explore:\"Изучить модель ↗\", btn_collab:\"Сотрудничество →",
-    nav_framework:"Модель\", nav_about:\"Исследователь\", nav_preprint:\"Препринт",
-    nav_book:"Книги\", nav_writing:\"Публикации\", nav_collab:\"Сотрудничество",
-    sec_framework:"Модель <em>Тафхина<\/em>\", sec_about:\"Исследователь — <em>Юлиана Грасман<\/em>",
-    sec_preprint:"Академические <em>Препринты<\/em>\", sec_books:\"Книги — <em>Серия «Архитектура Выживания»<\/em>",
-    sec_writing:"Публикации на <em>Medium<\/em>\", sec_contact:\"Исследовательское <em>Сотрудничество<\/em>",
-    side_status:"Статус\", side_status_val:\"● Препринт опубликован · Февраль 2026\", side_arch:\"Архитектура управления",
-    state_h1:"H1 — Обдуманный контроль\", state_arr1:\"↓ порог необратимости",
-    state_h3:"H3 — Уровень арбитража\", state_arr2:\"↓ событие передачи\", state_h2:\"H2 — Процедурная непрерывность",
-    side_criteria:"4 Операционных критерия\", side_collab:\"Открыто для сотрудничества",
-    side_collab_list:"Симуляционные исследования<br>Критически важные системы<br>Стрессовая нейронаука<br>Человеческие факторы / HRI<br>Авиация и хирургия",
-    fw_p1:"Существующие модели описывают либо оптимизированную производительность (поток, NDM), либо коллапс системы (заморозка, диссоциация). Переходная граница между этими состояниями — где обдуманный контроль уступает, а согласованность действий сохраняется — лишена единого описания.",
-    fw_p2:"Тафхина предлагает трёхуровневую архитектуру передачи управления: уровень обдуманного контроля (H1), обеспечивающий оптимизацию; уровень процедурной непрерывности (H2), обеспечивающий быстрое воплощённое исполнение; и уровень арбитража (H3), отслеживающий воспринимаемую необратимость и перераспределяющий полномочия управления.",
-    fw_p3:"Воспринимаемая необратимость — а не опасность сама по себе — функционирует как взвешивающий сигнал. Когда система интерпретирует ситуацию как приближающуюся к точке невозврата, H3 переключает доминирование на H2, сохраняя согласованность траектории до того, как явное рассуждение успевает среагировать.",
-    fw_flow:"Поток — Оптимизация\", fw_freeze:\"Заморозка — Коллапс",
-    crit_ic_name:"Необратимое последствие\", crit_ic_desc:\"Актор воспринимает значимую потерю вариантов сброса. Не объективная опасность — субъективный вывод об уменьшении корректирующего поля.",
-    crit_tp_name:"Давление времени\", crit_tp_desc:\"Окно принятия решения сжато ниже нормальной обдуманной пропускной способности обработки. Аналитическое рассуждение становится слишком медленным относительно ставок.",
-    crit_er_name:"Сниженное явное рассуждение\", crit_er_desc:\"Вербализуемое обдумывание ослабевает во время выполнения действия. Объяснение следует ретроспективно — не одновременно.",
-    crit_ac_name:"Сохранённая непрерывность действия\", crit_ac_desc:\"Моторная и поведенческая согласованность остаётся нетронутой или улучшается. Отличает Тафхину от реакций заморозки и коллапса.",
-    bio_intro:"Юлиана Грасман — разработчик фреймворков, автор и исследователь, специализирующийся на внутренней навигации, архитектуре принятия решений и адаптации после давления. Она является создателем <strong style=\"color:var(--accent); font-weight:400;\">Graskheenics</strong> и фреймворка «Архитектура Выживания», которые исследуют, как человеческие агенты стабилизируют принятие решений и поддерживают внутреннюю непрерывность в условиях необратимых последствий.",
-    bio_lineage:"Исследования Грасман строятся на многодесятилетней линии физиологической и психологической дисциплины. Её методология уходит корнями в клинический учебный план «Саморегуляции» 1990 года, разработанный её отцом, специалистом по физиотерапии.",
-    bio_lived:"Её основной исследовательский результат, фреймворк Тафхина, является «живой экстракцией», полученной из более чем десяти лет наблюдения в гольф-мотоспорте Персидского залива (2012–2023). Задокументированная в региональных СМИ — Khaleej Times (2017), Bazaar (2018), Lovin Dubai (2020) — Грасман, профессионально известная как <strong style=\"color:var(--text-hi); font-weight:400;\">Afra Drift</strong>, занимала уникальную позицию первопроходца для женщин в ближневосточном мотоспорте.",
-    bio_accident:"Этот период предоставил критически важные данные о человеческой навигации во время структурного и социального коллапса. Концепция «Внутренней непрерывности» была подтверждена выживанием и восстановлением Грасман после сильного автомобильного аварии 2017 года.",
-    concept_tafheena:"Граничное условие, при котором действие продолжается несмотря на отказ объяснительного познания.",
-    concept_dm:"Состояние риска, при котором люди пытаются имитировать обратимую машинную оптимизацию в необратимых физических средах.",
-    concept_grascode:"Операционная логика для снижения трения принятия решений и перекалибровки направления после давления.",
-    epistemic:"Тафхина была разработана не на основе существующих фреймворков, а ретроспективно позиционирована по отношению к ним. Наблюдательный корпус является одноучастниковым и может отражать индивидуальную историю обучения. Работа представляет предварительную гипотезогенерирующую модель, а не проверенный механизм.",
-    concept_stmt:"Новая архитектура стабильности принятия решений человека в необратимых условиях.",
-    concept_body:"Два взаимосвязанных фреймворка — Тафхина и GRASCODE — формируют полную модель поведения человека при принятии решений под экстремальным давлением: один описывает граничное событие, другой отображает операционную последовательность, которая следует за ним.",
-    abs_tafheena:"Интегрируя перспективы теоретико-управленческих описаний моторной регуляции, нейронауки стресса, натуралистического принятия решений и архитектур обеспечения безопасности в критически важной инженерии, данная статья предлагает Тафхину как концептуальный арбитражный уровень, описывающий переход контрольных полномочий в ситуациях, приближающихся к необратимому ограничению.",
-    abs_grascode1:"GRASCODE — это структурированный фреймворк архитектуры принятия решений, предназначенный для объяснения и поддержки действий человека в средах, где последствия необратимы, а время ограничено. Традиционные модели принятия решений часто предполагают стабильные условия и достаточное время для аналитической оценки.",
-    abs_grascode2:"Архитектура определяет ключевые фазы, включая распознавание паттернов, идентификацию механизма, формирование выбора, стабилизацию холостого хода, пересечение порога активации, принятие ответственности, исполнение решения и передачу последствий.",
-    contact_p1:"Тафхина — открытая гипотеза. Фреймворк требует эмпирической проверки с участием независимых участников в различных областях. Если вы работаете в области симуляционных исследований, критически важных систем, нейрокогниции или человеческих факторов — и видите методологическую связь — прямой контакт приветствуется.",
-    contact_p2:"Особый интерес представляют сотрудники, способные применить контролируемые экспериментальные парадигмы к поведенческим и нейрокогнитивным прогнозам, изложенным в препринте.",
-    col1:"Исследования на симуляторах вождения или авиации, измеряющие сигнатуры переходов управления",
-    col2:"Нейрофизиология префронтально-процедурных переходов под острым стрессом",
-    col3:"Человеческие факторы в хирургических или аварийно-спасательных средах",
-    col4:"Взаимодействие человека и ИИ и дизайн систем распознавания отказов",
-    col5:"Кросс-культурная валидация феноменов граничного состояния",
-  },
-  ar: {
-    hero_sys:"نموذج الحالة الحدّية · نقل التحكّم · القيد اللاعكوس",
-    hero_title:"حين تضطرّ الأنظمة<br>\n      <span class=\"hero-title-accent\">إلى التخلّي عن التحكّم</span><br>\n      لتبقى على قيد الحياة.",
-    hero_sub:"// إطار متعدد التخصصات للفعل البشري في ظل اللاعكوسية المُدرَكَة",
-    hero_desc:"تقترح تفحينة وصفاً وظيفياً للنظام الانتقالي الذي يتراجع فيه الإدراك التأملي بينما يستمر الفعل التكيّفي — على غرار آلية التبديل في هندسة الأنظمة الحرجة. تقع بين التدفق والتجمّد، وتُؤطّر هذا الانتقال بوصفه حدث تحكيم في السيطرة لا غريزةً.",
-    btn_download:"↓ تحميل البحث المسبق\", btn_explore:\"استكشاف النموذج ↗\", btn_collab:\"تعاون →",
-    nav_framework:"الإطار\", nav_about:\"الباحثة\", nav_preprint:\"البحث",
-    nav_book:"الكتب\", nav_writing:\"المقالات\", nav_collab:\"تعاون",
-    sec_framework:"إطار <em>تفحينة<\/em>\", sec_about:\"الباحثة — <em>يوليانا غراسمان<\/em>",
-    sec_preprint:"الأبحاث <em>المسبقة<\/em>\", sec_books:\"الكتب — <em>سلسلة هندسة البقاء<\/em>",
-    sec_writing:"مقالات على <em>Medium<\/em>\", sec_contact:\"<em>التعاون<\/em> البحثي",
-    side_status:"الحالة\", side_status_val:\"● البحث منشور · فبراير 2026\", side_arch:\"هندسة التحكّم",
-    state_h1:"H1 — التحكّم التأملي\", state_arr1:\"↓ عتبة اللاعكوسية",
-    state_h3:"H3 — مستوى التحكيم\", state_arr2:\"↓ حدث نقل التحكّم\", state_h2:\"H2 — استمرارية الإجراءات",
-    side_criteria:"4 معايير تشغيلية\", side_collab:\"مفتوح للتعاون",
-    side_collab_list:"أبحاث المحاكاة<br>الأنظمة الحرجة<br>علم الأعصاب والإجهاد<br>العوامل البشرية<br>الطيران والجراحة",
-    fw_p1:"تصف النماذج القائمة إما الأداء المُحسَّن (التدفق، NDM) أو انهيار النظام (التجمّد، الانفصال). الحدّ الانتقالي بين هذين الحالتين — حيث يتراجع التحكّم التأملي بينما تستمر تماسك الفعل — يفتقر إلى وصف موحّد.",
-    fw_p2:"تقترح تفحينة هندسة ثلاثية المستويات لنقل التحكّم: مستوى التحكّم التأملي (H1) الذي يحكم التحسين؛ ومستوى استمرارية الإجراءات (H2) الذي يُتيح التنفيذ السريع المُجسَّد؛ ومستوى التحكيم (H3) الذي يراقب اللاعكوسية المُدرَكة ويُعيد توزيع صلاحيات التحكّم.",
-    fw_p3:"اللاعكوسية المُدرَكة — لا الخطر وحده — تعمل بوصفها إشارة ترجيح. حين يُفسّر النظام الوضع على أنه يقترب من نقطة اللاعودة، يُحوّل H3 الهيمنة إلى H2، محافظاً على تماسك المسار قبل أن يتمكّن التفكير الصريح من الاستجابة.",
-    fw_flow:"التدفق — التحسين\", fw_freeze:\"التجمّد — الانهيار",
-    crit_ic_name:"العواقب اللاعكوسية\", crit_ic_desc:\"يُدرك الفاعل خسارة ذات معنى في خيارات إعادة الضبط. ليست خطراً موضوعياً — بل استنتاج ذاتي بتقلّص هامش التصحيح.",
-    crit_tp_name:"ضغط الوقت\", crit_tp_desc:\"نافذة القرار مضغوطة دون طاقة المعالجة التأملية الاعتيادية. يصبح التفكير التحليلي بطيئاً جداً بالنسبة للمخاطر.",
-    crit_er_name:"انخفاض التفكير الصريح\", crit_er_desc:\"يتراجع التداول اللفظي خلال تنفيذ الفعل. التفسير يأتي بأثر رجعي — لا بالتزامن.",
-    crit_ac_name:"الحفاظ على استمرارية الفعل\", crit_ac_desc:\"يبقى التماسك الحركي والسلوكي سليماً أو يتحسّن. يميّز تفحينة عن ردود الفعل بالتجمّد والانهيار.",
-    bio_intro:"يوليانا غراسمان مطوِّرة أطر عمل وباحثة ومؤلِّفة متخصصة في الملاحة الداخلية وهندسة القرار والتكيّف ما بعد الضغط. وهي مؤسِّسة <strong style=\"color:var(--accent); font-weight:400;\">Graskheenics</strong> وإطار هندسة البقاء، اللذين يستكشفان كيف يُثبِّت الفاعلون البشريون قراراتهم ويحافظون على استمراريتهم الداخلية في ظل العواقب اللاعكوسية.",
-    bio_lineage:"يرتكز بحث غراسمان على نسب متعدد العقود من الانضباط الفسيولوجي والنفسي. منهجيتها متجذّرة في منهج \"الضبط الذاتي\" السريري لعام 1990 الذي وضعه والدها، أخصائي العلاج الطبيعي.",
-    bio_lived:"ناتجها البحثي الأساسي، إطار تفحينة، هو استخلاص مُعاش مستمدّ من أكثر من عقد من المراقبة في رياضة السيارات بالخليج (2012–2023). وقد وثّقتها وسائل إعلام إقليمية — خليج تايمز (2017)، بازار (2018)، لوفن دبي (2020) — إذ كانت غراسمان، المعروفة مهنياً باسم <strong style=\"color:var(--text-hi); font-weight:400;\">Afra Drift</strong>، رائدةً للمرأة في رياضة السيارات بالشرق الأوسط.",
-    bio_accident:"وفّرت هذه الفترة بيانات حيوية عن الملاحة البشرية إبّان الانهيار الهيكلي والاجتماعي. تجلّى مفهوم \"الاستمرارية الداخلية\" من خلال نجاة غراسمان وتعافيها من حادث سيارة عنيف عام 2017.",
-    concept_tafheena:"حالة حدّية يستمر فيها الفعل رغم فشل الإدراك التفسيري.",
-    concept_dm:"حالة مخاطرة يحاول فيها البشر تقليد تحسين الآلة العكوس في بيئات مادية لاعكوسية.",
-    concept_grascode:"منطق تشغيلي لتقليل الاحتكاك في القرار وإعادة معايرة الاتجاه بعد الضغط.",
-    epistemic:"لم تُشتقّ تفحينة من أطر قائمة، بل وُضعت في علاقة بها بأثر رجعي. المجموعة الاستقرائية أحادية المشارك وقد تعكس تاريخ التدريب الفردي. يُقدّم العمل نموذجاً توليدياً للفرضيات، لا آلية مُتحقَّقة منها.",
-    concept_stmt:"هندسة جديدة لاستقرار القرار البشري في الظروف اللاعكوسية.",
-    concept_body:"يُشكّل الإطاران المترابطان — تفحينة وGRASCODE — نموذجاً كاملاً لسلوك الإنسان في اتخاذ القرار تحت ضغط متطرّف: أحدهما يصف الحدث الحدّي، والآخر يرسم التسلسل التشغيلي الذي يتبعه.",
-    abs_tafheena:"بتكامل وجهات نظر من نظرية التحكّم في التنظيم الحركي وعلم الأعصاب والإجهاد واتخاذ القرار الطبيعي وهندسة ضمان السلامة، تقترح هذه الورقة تفحينة بوصفها مستوى تحكيمياً مفاهيمياً يصف كيف تنتقل صلاحية التحكّم حين تقترب المواقف من القيد اللاعكوس.",
-    abs_grascode1:"GRASCODE إطار هندسة قرار منظَّمة صُمِّم لشرح الفعل البشري ودعمه في البيئات التي تكون فيها العواقب لاعكوسية والوقت محدوداً. كثيراً ما تفترض نماذج القرار التقليدية ظروفاً مستقرة ووقتاً كافياً للتقييم التحليلي.",
-    abs_grascode2:"تُحدّد الهندسة مراحل رئيسية تشمل التعرّف على الأنماط وتحديد الآلية وتشكيل الاختيار وتثبيت الخمول وعبور عتبة التنشيط والالتزام بالمسؤولية وتنفيذ القرار ونقل العواقب.",
-    contact_p1:"تفحينة فرضية مفتوحة. يستلزم الإطار التحقق التجريبي عبر مشاركين مستقلين ومجالات متعددة. إن كنت تعمل في أبحاث المحاكاة أو الأنظمة الحرجة أو علم الأعصاب المعرفي أو العوامل البشرية — وترى صلة منهجية — فالتواصل المباشر مرحّب به.",
-    contact_p2:"نحن مهتمون بشكل خاص بالمتعاونين القادرين على تطبيق النماذج التجريبية المضبوطة على التوقعات السلوكية والعصبية الواردة في البحث.",
-    col1:"دراسات محاكاة القيادة أو الطيران التي تقيس سمات انتقالات التحكّم",
-    col2:"فسيولوجيا الأعصاب للانتقالات من الفص الجبهي إلى الإجراءات تحت الإجهاد الحاد",
-    col3:"العوامل البشرية في بيئات الجراحة والاستجابة للطوارئ",
-    col4:"تفاعل الإنسان مع الذكاء الاصطناعي وتصميم أنظمة التعرّف على الأعطال",
-    col5:"التحقق المتعدد الثقافات من ظواهر الحالة الحدّية",
-  },
-  ja: {
-    hero_sys:"境界状態モデル · 制御の引き渡し · 不可逆的制約",
-    hero_title:"システムが<br>\n      <span class=\"hero-title-accent\">制御を引き渡す</span><br>\n      生き残るために。",
-    hero_sub:"// 知覚された不可逆性における人間行動の学際的フレームワーク",
-    hero_desc:"タフィーナは、熟慮的認知が減衰しながら適応的行動が継続する移行体制の機能的記述を提案します — 安全クリティカルエンジニアリングにおけるランタイム保証フェイルオーバーに類似しています。フローとフリーズの間に位置し、この移行を本能ではなく制御調停イベントとして捉えます。",
-    btn_download:"↓ プレプリントをダウンロード\", btn_explore:\"モデルを探索 ↗\", btn_collab:\"コラボレーション →",
-    nav_framework:"フレームワーク\", nav_about:\"研究者\", nav_preprint:\"プレプリント",
-    nav_book:"書籍\", nav_writing:\"記事\", nav_collab:\"協力",
-    sec_framework:"<em>タフィーナ</em>フレームワーク\", sec_about:\"研究者 — <em>ユリアナ・グラスマン</em>",
-    sec_preprint:"学術<em>プレプリント</em>\", sec_books:\"書籍 — <em>サバイバルアーキテクチャシリーズ</em>",
-    sec_writing:"<em>Medium</em>での執筆\", sec_contact:\"研究<em>コラボレーション</em>",
-    side_status:"ステータス\", side_status_val:\"● プレプリント公開中 · 2026年2月\", side_arch:\"制御アーキテクチャ",
-    state_h1:"H1 — 熟慮的制御\", state_arr1:\"↓ 不可逆性閾値",
-    state_h3:"H3 — 調停レイヤー\", state_arr2:\"↓ 引き渡しイベント\", state_h2:\"H2 — 手続き的継続性",
-    side_criteria:"4つの運用基準\", side_collab:\"コラボレーション募集",
-    side_collab_list:"シミュレーション研究<br>安全クリティカルシステム<br>ストレス神経科学<br>ヒューマンファクター<br>航空・外科研究",
-    fw_p1:"既存モデルは最適化されたパフォーマンス（フロー、NDM）またはシステム崩壊（フリーズ、解離）のどちらかを記述しています。これらの状態間の移行境界 — 熟慮的制御が譲歩しながら行動の一貫性が持続する場所 — には統一された記述がありません。",
-    fw_p2:"タフィーナは三層制御引き渡しアーキテクチャを提案します：最適化を管理する熟慮的制御層（H1）、迅速な具現化された実行を可能にする手続き的継続性層（H2）、そして知覚された不可逆性を監視し制御権限を再配分する調停層（H3）。",
-    fw_p3:"知覚された不可逆性 — 危険だけではなく — が重み付け信号として機能します。システムが状況を不可逆点に近づいていると解釈すると、H3はH2への支配を移行し、明示的推論が応答できる前に軌道の一貫性を保持します。",
-    fw_flow:"フロー — 最適化\", fw_freeze:\"フリーズ — 崩壊",
-    crit_ic_name:"不可逆的結果\", crit_ic_desc:\"行為者はリセット選択肢の意味のある喪失を知覚します。客観的な危険ではなく — 修正余地の縮小という主観的推論。",
-    crit_tp_name:"時間的プレッシャー\", crit_tp_desc:\"決定ウィンドウが通常の熟慮的処理能力以下に圧縮されます。分析的推論がステークに対して遅すぎます。",
-    crit_er_name:"明示的推論の低下\", crit_er_desc:\"行動実行中に言語化可能な熟慮が減衰します。説明は遡及的に続きます — 同時ではありません。",
-    crit_ac_name:"行動継続性の保持\", crit_ac_desc:\"運動的および行動的一貫性が無傷または強化されたまま残ります。タフィーナをフリーズおよび崩壊反応から区別します。",
-    bio_intro:"ユリアナ・グラスマンは、内的ナビゲーション、意思決定アーキテクチャ、プレッシャー後適応を専門とするフレームワーク開発者、著者、研究者です。",
-    bio_lineage:"グラスマンの研究は、数十年にわたる生理学的・心理学的訓練の系譜に基づいています。彼女の方法論は、理学療法士の父親が確立した1990年の臨床「自己調節」カリキュラムに根ざしています。",
-    bio_lived:"彼女の主要な研究成果であるタフィーナフレームワークは、ガルフモータースポーツ（2012年〜2023年）での10年以上の参加観察から得られた「生きた抽出」です。",
-    bio_accident:"この期間は、構造的・社会的崩壊における人間のナビゲーションに関する重要なデータを提供しました。「内的継続性」の概念は、2017年の高衝撃車両事故からのグラスマンの生存と回復を通じて検証されました。",
-    concept_tafheena:"説明的認知の失敗にもかかわらず行動が持続する境界条件。",
-    concept_dm:"人間が不可逆的な物理環境で可逆的な機械最適化を模倣しようとするリスク状態。",
-    concept_grascode:"意思決定の摩擦を減らし、プレッシャー後に方向を再調整するための運用ロジック。",
-    epistemic:"タフィーナは既存のフレームワークから派生したのではなく、遡及的にそれらとの関係に位置付けられました。観察コーパスは単一参加者であり、個人の訓練歴を反映している可能性があります。",
-    concept_stmt:"不可逆的条件下における人間の意思決定安定性の新しいアーキテクチャ。",
-    concept_body:"二つの相互接続されたフレームワーク — タフィーナとGRASCODE — は、極度のプレッシャー下での人間の意思決定行動の完全なモデルを形成します。",
-    abs_tafheena:"運動調節の制御理論的説明、ストレス神経科学、自然主義的意思決定、安全クリティカルエンジニアリングランタイム保証アーキテクチャの観点を統合し、この論文はタフィーナを、状況が不可逆的制約に近づくときに制御権限がどのように移行するかを記述する概念的調停層として提案します。",
-    abs_grascode1:"GRASCODEは、結果が不可逆的で時間が限られた環境における人間の行動を説明しサポートするために設計された構造化意思決定アーキテクチャフレームワークです。",
-    abs_grascode2:"アーキテクチャは、パターン認識、メカニズム識別、選択形成、アイドリング安定化、活性化閾値通過、責任コミットメント、意思決定実行、結果伝達を含む主要フェーズを特定します。",
-    contact_p1:"タフィーナはオープンな仮説です。フレームワークは、独立した参加者、領域、測定モダリティにわたる実証的検証を必要とします。",
-    contact_p2:"プレプリントで概説された行動シグネチャと神経認知予測に制御された実験パラダイムをもたらせる協力者に特に関心があります。",
-    col1:"制御移行シグネチャを測定するシミュレーターベースの運転または航空研究",
-    col2:"急性ストレス下での前頭前野から手続き的移行の神経生理学",
-    col3:"外科または緊急対応環境におけるヒューマンファクター",
-    col4:"人間とAIの相互作用とフェイルオーバー認識システム設計",
-    col5:"境界状態現象の異文化検証",
-  },
-  ko: {
-    hero_sys:"경계 상태 모델 · 제어 이전 · 비가역적 제약",
-    hero_title:"시스템이<br>\n      <span class=\"hero-title-accent\">제어를 이전할 때</span><br>\n      생존하기 위해.",
-    hero_sub:"// 지각된 비가역성에서 인간 행동에 대한 학제적 프레임워크",
-    hero_desc:"타프히나는 심의적 인지가 감쇠하면서 적응적 행동이 지속되는 전환 체제의 기능적 설명을 제안합니다 — 안전 핵심 엔지니어링의 런타임 보증 페일오버와 유사합니다.",
-    btn_download:"↓ 프리프린트 다운로드\", btn_explore:\"모델 탐색 ↗\", btn_collab:\"협업 →",
-    nav_framework:"프레임워크\", nav_about:\"연구자\", nav_preprint:\"프리프린트",
-    nav_book:"도서\", nav_writing:\"글\", nav_collab:\"협업",
-    sec_framework:"<em>타프히나</em> 프레임워크\", sec_about:\"연구자 — <em>율리아나 그라스만</em>",
-    sec_preprint:"학술 <em>프리프린트</em>\", sec_books:\"도서 — <em>서바이벌 아키텍처 시리즈</em>",
-    sec_writing:"<em>Medium</em> 기고\", sec_contact:\"연구 <em>협업</em>",
-    side_status:"상태\", side_status_val:\"● 프리프린트 공개 · 2026년 2월\", side_arch:\"제어 아키텍처",
-    state_h1:"H1 — 심의적 제어\", state_arr1:\"↓ 비가역성 임계값",
-    state_h3:"H3 — 조정 레이어\", state_arr2:\"↓ 이전 이벤트\", state_h2:\"H2 — 절차적 연속성",
-    side_criteria:"4가지 운영 기준\", side_collab:\"협업 모집",
-    side_collab_list:"시뮬레이션 연구<br>안전 핵심 시스템<br>스트레스 신경과학<br>인간 요인<br>항공 및 수술 연구",
-    fw_p1:"기존 모델은 최적화된 성능(플로우, NDM) 또는 시스템 붕괴(동결, 해리) 중 하나를 설명합니다. 심의적 제어가 양보하면서 행동 일관성이 지속되는 이 상태들 사이의 전환 경계는 통합된 설명이 없습니다.",
-    fw_p2:"타프히나는 3층 제어 이전 아키텍처를 제안합니다: 최적화를 관리하는 심의적 제어 층(H1), 신속한 구현된 실행을 가능하게 하는 절차적 연속성 층(H2), 그리고 지각된 비가역성을 모니터링하고 제어 권한을 재배분하는 조정 층(H3).",
-    fw_p3:"지각된 비가역성 — 위험만이 아니라 — 이 가중치 신호로 기능합니다. 시스템이 상황을 돌아올 수 없는 지점에 접근하는 것으로 해석할 때, H3는 명시적 추론이 반응할 수 있기 전에 궤적 일관성을 보존하면서 H2로 지배를 이동합니다.",
-    fw_flow:"플로우 — 최적화\", fw_freeze:\"동결 — 붕괴",
-    crit_ic_name:"비가역적 결과\", crit_ic_desc:\"행위자는 리셋 옵션의 의미 있는 손실을 지각합니다. 객관적 위험이 아니라 — 수정 여지 축소에 대한 주관적 추론.",
-    crit_tp_name:"시간 압박\", crit_tp_desc:\"결정 창이 정상 심의 처리 능력 이하로 압축됩니다.",
-    crit_er_name:"명시적 추론 감소\", crit_er_desc:\"행동 실행 중 언어화 가능한 심의가 감쇠합니다. 설명은 소급하여 따릅니다.",
-    crit_ac_name:"행동 연속성 보존\", crit_ac_desc:\"운동 및 행동 일관성이 손상되지 않거나 향상된 상태로 유지됩니다.",
-    bio_intro:"율리아나 그라스만은 내부 탐색, 의사결정 아키텍처, 압박 후 적응을 전문으로 하는 프레임워크 개발자, 저자, 연구자입니다.",
-    bio_lineage:"그라스만의 연구는 수십 년에 걸친 생리적, 심리적 규율의 계보를 기반으로 합니다.",
-    bio_lived:"그녀의 주요 연구 결과물인 타프히나 프레임워크는 걸프 모터스포츠(2012-2023)에서 10년 이상의 참여 관찰에서 파생된 '살아있는 추출'입니다.",
-    bio_accident:"이 기간은 구조적, 사회적 붕괴 동안 인간 탐색에 관한 중요한 데이터를 제공했습니다.",
-    concept_tafheena:"설명적 인지의 실패에도 불구하고 행동이 지속되는 경계 조건.",
-    concept_dm:"인간이 비가역적 물리적 환경에서 가역적 기계 최적화를 모방하려는 위험 상태.",
-    concept_grascode:"의사결정 마찰을 줄이고 압박 후 방향을 재교정하기 위한 운영 논리.",
-    epistemic:"타프히나는 기존 프레임워크에서 파생된 것이 아니라 소급적으로 그것들과의 관계에 위치했습니다.",
-    concept_stmt:"비가역적 조건에서 인간 의사결정 안정성의 새로운 아키텍처.",
-    concept_body:"두 개의 상호 연결된 프레임워크 — 타프히나와 GRASCODE — 는 극도의 압박 하에서 인간 의사결정 행동의 완전한 모델을 형성합니다.",
-    abs_tafheena:"운동 조절의 제어 이론적 설명, 스트레스 신경과학, 자연주의적 의사결정 및 런타임 보증 아키텍처의 관점을 통합하여, 이 논문은 타프히나를 상황이 비가역적 제약에 접근할 때 제어 권한이 어떻게 전환되는지 설명하는 개념적 조정 층으로 제안합니다.",
-    abs_grascode1:"GRASCODE는 결과가 비가역적이고 시간이 제한된 환경에서 인간 행동을 설명하고 지원하도록 설계된 구조화된 의사결정 아키텍처 프레임워크입니다.",
-    abs_grascode2:"아키텍처는 패턴 인식, 메커니즘 식별, 선택 형성, 유휴 안정화, 활성화 임계값 통과, 책임 헌신, 의사결정 실행 및 결과 전송을 포함하는 주요 단계를 식별합니다.",
-    contact_p1:"타프히나는 열린 가설입니다. 프레임워크는 독립적인 참여자, 영역 및 측정 양식에 걸친 경험적 검증이 필요합니다.",
-    contact_p2:"프리프린트에 개요된 행동 서명과 신경인지 예측에 통제된 실험 패러다임을 가져올 수 있는 협력자에 특히 관심이 있습니다.",
-    col1:"제어 전환 서명을 측정하는 시뮬레이터 기반 운전 또는 항공 연구",
-    col2:"급성 스트레스 하의 전두엽에서 절차적 전환의 신경생리학",
-    col3:"수술 또는 응급 대응 환경의 인간 요인",
-    col4:"인간-AI 상호작용 및 페일오버 인식 시스템 설계",
-    col5:"경계 상태 현상의 교차 문화 검증",
-  },
-  de: {
-    hero_sys:"GRENZZUSTANDSMODELL · STEUERUNGSÜBERGABE · IRREVERSIBLE EINSCHRÄNKUNG",
-    hero_title:"Wenn Systeme<br>\n      <span class=\"hero-title-accent\">die Kontrolle übergeben</span><br>\n      um zu überleben.",
-    hero_sub:"// Ein interdisziplinäres Rahmenwerk für menschliches Handeln unter wahrgenommener Irreversibilität",
-    hero_desc:"Tafheena schlägt eine funktionale Beschreibung des Übergangsregimes vor, in dem deliberatives Denken nachlässt, während adaptives Handeln fortgesetzt wird — analog zum Runtime-Assurance-Failover im sicherheitskritischen Engineering.",
-    btn_download:"↓ Preprint herunterladen\", btn_explore:\"Modell erkunden ↗\", btn_collab:\"Zusammenarbeiten →",
-    nav_framework:"Framework\", nav_about:\"Forscherin\", nav_preprint:\"Preprint",
-    nav_book:"Bücher\", nav_writing:\"Artikel\", nav_collab:\"Zusammenarbeit",
-    sec_framework:"Das <em>Tafheena</em>-Framework\", sec_about:\"Forscherin — <em>Yuliana Grasman</em>",
-    sec_preprint:"Akademische <em>Preprints</em>\", sec_books:\"Bücher — <em>Survival Architecture Serie</em>",
-    sec_writing:"Artikel auf <em>Medium</em>\", sec_contact:\"Forschungs-<em>Zusammenarbeit</em>",
-    side_status:"Status\", side_status_val:\"● Preprint veröffentlicht · Feb 2026\", side_arch:\"Steuerungsarchitektur",
-    state_h1:"H1 — Deliberative Kontrolle\", state_arr1:\"↓ Irreversibilitätsschwelle",
-    state_h3:"H3 — Arbitrationsschicht\", state_arr2:\"↓ Übergabeereignis\", state_h2:\"H2 — Prozedurale Kontinuität",
-    side_criteria:"4 Betriebskriterien\", side_collab:\"Offen für Zusammenarbeit",
-    side_collab_list:"Simulationsforschung<br>Sicherheitskritische Systeme<br>Stressneurowissenschaft<br>Human Factors / HRI<br>Luft- und Raumfahrt & Chirurgie",
-    fw_p1:"Bestehende Modelle beschreiben entweder optimierte Leistung (Flow, NDM) oder Systemkollaps (Freeze, Dissoziation). Die Übergangsgrenze zwischen diesen Zuständen fehlt eine einheitliche Beschreibung.",
-    fw_p2:"Tafheena schlägt eine dreischichtige Steuerungsübergabe-Architektur vor: eine deliberative Steuerungsschicht (H1), eine prozedurale Kontinuitätsschicht (H2) und eine Arbitrationsschicht (H3).",
-    fw_p3:"Wahrgenommene Irreversibilität — nicht Gefahr allein — funktioniert als Gewichtungssignal. Wenn das System eine Situation als Annäherung an einen Point of No Return interpretiert, verschiebt H3 die Dominanz auf H2.",
-    fw_flow:"Flow — Optimierung\", fw_freeze:\"Freeze — Kollaps",
-    crit_ic_name:"Irreversible Konsequenz\", crit_ic_desc:\"Der Akteur nimmt einen bedeutungsvollen Verlust von Reset-Optionen wahr. Keine objektive Gefahr — subjektive Schlussfolgerung über abnehmende Korrekturspielmarge.",
-    crit_tp_name:"Zeitdruck\", crit_tp_desc:\"Das Entscheidungsfenster ist unter die normale deliberative Verarbeitungskapazität komprimiert.",
-    crit_er_name:"Reduziertes explizites Denken\", crit_er_desc:\"Verbalisierbares Deliberieren ist während der Handlungsausführung gedämpft. Erklärung folgt retrospektiv.",
-    crit_ac_name:"Erhaltene Handlungskontinuität\", crit_ac_desc:\"Motorische und verhaltensmäßige Kohärenz bleibt intakt oder verbessert sich.",
-    bio_intro:"Yuliana Grasman ist Rahmenentwicklerin, Autorin und Forscherin, spezialisiert auf innere Navigation, Entscheidungsarchitektur und Post-Druck-Adaptation. Sie ist die Begründerin von Graskheenics.",
-    bio_lineage:"Grasmans Forschung baut auf einer jahrzehntelangen Linie physiologischer und psychologischer Disziplin auf.",
-    bio_lived:"Ihr primäres Forschungsergebnis, das Tafheena-Framework, ist eine 'gelebte Extraktion' aus über einem Jahrzehnt Teilnehmerbeobachtung im Golfsport-Motorsport (2012–2023).",
-    bio_accident:"Diese Zeit lieferte kritische Daten über menschliche Navigation während strukturellen und sozialen Zusammenbruchs.",
-    concept_tafheena:"Ein Grenzzustand, in dem Handlung trotz des Versagens erklärenden Denkens fortgesetzt wird.",
-    concept_dm:"Ein Risikostand, in dem Menschen versuchen, reversible Maschinenoptimierung in irreversiblen physischen Umgebungen nachzuahmen.",
-    concept_grascode:"Eine operative Logik zur Reduzierung von Entscheidungsreibung und Neukalibrierung der Richtung nach Druck.",
-    epistemic:"Tafheena wurde nicht von bestehenden Frameworks abgeleitet, sondern retrospektiv in Bezug auf sie positioniert.",
-    concept_stmt:"Eine neue Architektur menschlicher Entscheidungsstabilität unter irreversiblen Bedingungen.",
-    concept_body:"Zwei miteinander verbundene Frameworks — Tafheena und GRASCODE — bilden ein vollständiges Modell menschlichen Entscheidungsverhaltens unter extremem Druck.",
-    abs_tafheena:"Durch die Integration von Perspektiven aus kontroltheoretischen Beschreibungen der motorischen Regulation, Stressneurowissenschaft und sicherheitskritischer Engineering-Laufzeitabsicherung schlägt dieses Papier Tafheena als konzeptuelle Arbitrationsschicht vor.",
-    abs_grascode1:"GRASCODE ist ein strukturiertes Entscheidungsarchitektur-Framework zur Erklärung und Unterstützung menschlichen Handelns in Umgebungen, in denen Konsequenzen irreversibel und die Zeit begrenzt ist.",
-    abs_grascode2:"Die Architektur identifiziert Schlüsselphasen einschließlich Mustererkennung, Mechanismusidentifikation, Wahlbildung, Leerlaufstabilisierung und Entscheidungsausführung.",
-    contact_p1:"Tafheena ist eine offene Hypothese. Das Framework erfordert empirische Validierung über unabhängige Teilnehmer, Domänen und Messmodalitäten hinweg.",
-    contact_p2:"Besonderes Interesse an Mitarbeitern, die kontrollierte experimentelle Paradigmen zu den Verhaltensignaturen bringen können.",
-    col1:"Simulatorbasierte Fahr- oder Luftfahrtstudien zur Messung von Steuerungsübergangssignaturen",
-    col2:"Neurophysiologie präfrontaler-zu-prozeduraler Übergänge unter akutem Stress",
-    col3:"Menschliche Faktoren in chirurgischen oder Notfallumgebungen",
-    col4:"Mensch-KI-Interaktion und Failover-Erkennungssystemdesign",
-    col5:"Kulturübergreifende Validierung von Grenzzustandsphänomenen",
-  },
-  zh: {
-    hero_sys:"边界状态模型 · 控制交接 · 不可逆约束",
-    hero_title:"当系统<br>\n      <span class=\"hero-title-accent\">交出控制权</span><br>\n      以求生存。",
-    hero_sub:"// 感知不可逆性下人类行为的跨学科框架",
-    hero_desc:"塔芙希娜提出了一种功能性描述，描述深思熟虑的认知减弱而适应性行动持续的过渡机制——类似于安全关键工程中的运行时保证故障切换。",
-    btn_download:"↓ 下载预印本\", btn_explore:\"探索模型 ↗\", btn_collab:\"合作 →",
-    nav_framework:"框架\", nav_about:\"研究者\", nav_preprint:\"预印本",
-    nav_book:"书籍\", nav_writing:\"文章\", nav_collab:\"合作",
-    sec_framework:"<em>塔芙希娜</em>框架\", sec_about:\"研究者 — <em>尤利亚娜·格拉斯曼</em>",
-    sec_preprint:"学术<em>预印本</em>\", sec_books:\"书籍 — <em>生存架构系列</em>",
-    sec_writing:"<em>Medium</em>写作\", sec_contact:\"研究<em>合作</em>",
-    side_status:"状态\", side_status_val:\"● 预印本已发布 · 2026年2月\", side_arch:\"控制架构",
-    state_h1:"H1 — 深思熟虑控制\", state_arr1:\"↓ 不可逆性阈值",
-    state_h3:"H3 — 仲裁层\", state_arr2:\"↓ 交接事件\", state_h2:\"H2 — 程序连续性",
-    side_criteria:"4项操作标准\", side_collab:\"寻求合作",
-    side_collab_list:"模拟研究<br>安全关键系统<br>压力神经科学<br>人因工程<br>航空与外科研究",
-    fw_p1:"现有模型要么描述优化性能（心流、NDM），要么描述系统崩溃（冻结、解离）。这些状态之间的过渡边界——深思熟虑控制让位而行动连贯性持续的地方——缺乏统一描述。",
-    fw_p2:"塔芙希娜提出三层控制交接架构：管理优化的深思熟虑控制层（H1）、实现快速具身执行的程序连续性层（H2）、监控感知不可逆性并重新分配控制权限的仲裁层（H3）。",
-    fw_p3:"感知到的不可逆性——而非单纯的危险——作为加权信号发挥作用。当系统将情况解释为接近不可逆点时，H3在显式推理能够响应之前将主导权转移到H2。",
-    fw_flow:"心流 — 优化\", fw_freeze:\"冻结 — 崩溃",
-    crit_ic_name:"不可逆后果\", crit_ic_desc:\"行为者感知到重置选项的有意义损失。不是客观危险——而是对纠正余地减少的主观推断。",
-    crit_tp_name:"时间压力\", crit_tp_desc:\"决策窗口压缩到正常深思熟虑处理能力以下。",
-    crit_er_name:"显式推理减少\", crit_er_desc:\"行动执行期间可语言化的深思被抑制。解释随后回溯性地跟进。",
-    crit_ac_name:"保持行动连续性\", crit_ac_desc:\"运动和行为连贯性保持完整或增强。将塔芙希娜与冻结和崩溃反应区分开来。",
-    bio_intro:"尤利亚娜·格拉斯曼是专注于内部导航、决策架构和压力后适应的框架开发者、作者和研究者。她是Graskheenics和生存架构框架的创始人。",
-    bio_lineage:"格拉斯曼的研究建立在数十年生理和心理学科传统的基础上。",
-    bio_lived:"她的主要研究成果塔芙希娜框架是从海湾地区摩托运动（2012-2023年）十余年参与观察中提取的'活体提取'。",
-    bio_accident:"这一时期提供了关于结构性和社会性崩溃期间人类导航的关键数据。",
-    concept_tafheena:"尽管解释性认知失败，行动仍然持续的边界条件。",
-    concept_dm:"人类试图在不可逆物理环境中模仿可逆机器优化的风险状态。",
-    concept_grascode:"减少决策摩擦并在压力后重新校准方向的操作逻辑。",
-    epistemic:"塔芙希娜不是从现有框架推导而来，而是回溯性地相对于它们定位。",
-    concept_stmt:"不可逆条件下人类决策稳定性的新架构。",
-    concept_body:"两个相互关联的框架——塔芙希娜和GRASCODE——形成了极端压力下人类决策行为的完整模型。",
-    abs_tafheena:"整合运动调节控制理论、压力神经科学、自然主义决策和安全关键工程运行时保证架构的视角，本文将塔芙希娜作为概念性仲裁层提出。",
-    abs_grascode1:"GRASCODE是一个结构化决策架构框架，旨在解释和支持后果不可逆且时间有限环境中的人类行动。",
-    abs_grascode2:"该架构识别关键阶段，包括模式识别、机制识别、选择形成、空转稳定、激活阈值穿越、责任承诺、决策执行和后果传递。",
-    contact_p1:"塔芙希娜是一个开放假设。该框架需要跨独立参与者、领域和测量模态的实证验证。",
-    contact_p2:"特别感兴趣的是能够将受控实验范式带入预印本中概述的行为特征和神经认知预测的合作者。",
-    col1:"测量控制转换特征的基于模拟器的驾驶或航空研究",
-    col2:"急性压力下前额叶到程序转换的神经生理学",
-    col3:"外科或紧急响应环境中的人因工程",
-    col4:"人机交互和故障切换识别系统设计",
-    col5:"边界状态现象的跨文化验证",
-  },
-  fr: {
-    hero_sys:"MODÈLE D'ÉTAT LIMITE · TRANSFERT DE CONTRÔLE · CONTRAINTE IRRÉVERSIBLE",
-    hero_title:"Quand les systèmes<br>\n      <span class=\"hero-title-accent\">cèdent le contrôle</span><br>\n      pour survivre.",
-    hero_sub:"// Un cadre interdisciplinaire pour l'action humaine sous irréversibilité perçue",
-    hero_desc:"Tafheena propose une description fonctionnelle du régime de transition dans lequel la cognition délibérative s'atténue tandis que l'action adaptative se poursuit — analogue au basculement d'assurance d'exécution dans l'ingénierie critique pour la sécurité.",
-    btn_download:"↓ Télécharger le préimpression\", btn_explore:\"Explorer le modèle ↗\", btn_collab:\"Collaborer →",
-    nav_framework:"Cadre\", nav_about:\"Chercheuse\", nav_preprint:\"Préimpression",
-    nav_book:"Livres\", nav_writing:\"Articles\", nav_collab:\"Collaborer",
-    sec_framework:"Le cadre <em>Tafheena</em>\", sec_about:\"Chercheuse — <em>Yuliana Grasman</em>",
-    sec_preprint:"Préimpressions <em>académiques</em>\", sec_books:\"Livres — <em>Série Architecture de Survie</em>",
-    sec_writing:"Écrits sur <em>Medium</em>\", sec_contact:\"<em>Collaboration</em> de recherche",
-    side_status:"Statut\", side_status_val:\"● Préimpression publiée · Fév 2026\", side_arch:\"Architecture de contrôle",
-    state_h1:"H1 — Contrôle délibératif\", state_arr1:\"↓ seuil d'irréversibilité",
-    state_h3:"H3 — Couche d'arbitrage\", state_arr2:\"↓ événement de transfert\", state_h2:\"H2 — Continuité procédurale",
-    side_criteria:"4 critères opérationnels\", side_collab:\"Ouvert à la collaboration",
-    side_collab_list:"Recherche en simulation<br>Systèmes critiques pour la sécurité<br>Neuroscience du stress<br>Facteurs humains / IHR<br>Aviation et chirurgie",
-    fw_p1:"Les modèles existants décrivent soit la performance optimisée (flow, NDM) soit l'effondrement du système (gel, dissociation). La frontière transitionnelle entre ces états manque d'une description unifiée.",
-    fw_p2:"Tafheena propose une architecture de transfert de contrôle à trois couches : une couche de contrôle délibératif (H1), une couche de continuité procédurale (H2) et une couche d'arbitrage (H3).",
-    fw_p3:"L'irréversibilité perçue — pas seulement le danger — fonctionne comme signal de pondération. Quand le système interprète une situation comme s'approchant d'un point de non-retour, H3 transfère la dominance à H2.",
-    fw_flow:"Flow — Optimisation\", fw_freeze:\"Gel — Effondrement",
-    crit_ic_name:"Conséquence irréversible\", crit_ic_desc:\"L'acteur perçoit une perte significative d'options de réinitialisation. Pas un danger objectif — une inférence subjective de marge corrective décroissante.",
-    crit_tp_name:"Pression temporelle\", crit_tp_desc:\"La fenêtre de décision est comprimée en dessous de la capacité de traitement délibératif normale.",
-    crit_er_name:"Raisonnement explicite réduit\", crit_er_desc:\"La délibération verbalisable est atténuée pendant l'exécution de l'action. L'explication suit rétrospectivement.",
-    crit_ac_name:"Continuité d'action préservée\", crit_ac_desc:\"La cohérence motrice et comportementale reste intacte ou améliorée.",
-    bio_intro:"Yuliana Grasman est développeuse de cadres, auteure et chercheuse spécialisée dans la navigation interne, l'architecture de décision et l'adaptation post-pression. Elle est l'originatrice de Graskheenics.",
-    bio_lineage:"La recherche de Grasman est fondée sur une lignée de plusieurs décennies de discipline physiologique et psychologique.",
-    bio_lived:"Son principal résultat de recherche, le cadre Tafheena, est une 'extraction vécue' dérivée de plus d'une décennie d'observation participante dans le motorsport du Golfe (2012–2023).",
-    bio_accident:"Cette période a fourni des données critiques sur la navigation humaine pendant l'effondrement structurel et social.",
-    concept_tafheena:"Une condition limite où l'action persiste malgré l'échec de la cognition explicative.",
-    concept_dm:"Un état de risque où les humains tentent d'imiter l'optimisation réversible des machines dans des environnements physiques irréversibles.",
-    concept_grascode:"Une logique opérationnelle pour réduire la friction décisionnelle et recalibrer la direction après la pression.",
-    epistemic:"Tafheena n'a pas été dérivée de cadres existants mais positionnée rétrospectivement par rapport à eux.",
-    concept_stmt:"Une nouvelle architecture de stabilité décisionnelle humaine dans des conditions irréversibles.",
-    concept_body:"Deux cadres interconnectés — Tafheena et GRASCODE — forment un modèle complet du comportement décisionnel humain sous pression extrême.",
-    abs_tafheena:"En intégrant des perspectives de la théorie du contrôle, la neuroscience du stress et l'assurance d'exécution, cet article propose Tafheena comme couche d'arbitrage conceptuelle décrivant comment l'autorité de contrôle transite quand les situations approchent la contrainte irréversible.",
-    abs_grascode1:"GRASCODE est un cadre d'architecture de décision structurée conçu pour expliquer et soutenir l'action humaine dans des environnements où les conséquences sont irréversibles et le temps est limité.",
-    abs_grascode2:"L'architecture identifie des phases clés incluant la reconnaissance de modèles, l'identification de mécanismes, la formation de choix, la stabilisation au ralenti et l'exécution de décision.",
-    contact_p1:"Tafheena est une hypothèse ouverte. Le cadre nécessite une validation empirique à travers des participants indépendants, des domaines et des modalités de mesure.",
-    contact_p2:"Particulièrement intéressée par des collaborateurs pouvant apporter des paradigmes expérimentaux contrôlés aux signatures comportementales décrites dans le préimpression.",
-    col1:"Études basées sur simulateur de conduite ou d'aviation mesurant les signatures de transition de contrôle",
-    col2:"Neurophysiologie des transitions préfrontales-à-procédurales sous stress aigu",
-    col3:"Facteurs humains dans les environnements chirurgicaux ou de réponse aux urgences",
-    col4:"Interaction humain-IA et conception de systèmes de reconnaissance de basculement",
-    col5:"Validation interculturelle des phénomènes d'état limite",
-  },
-  es: {
-    hero_sys:"MODELO DE ESTADO LÍMITE · TRANSFERENCIA DE CONTROL · RESTRICCIÓN IRREVERSIBLE",
-    hero_title:"Cuando los sistemas<br>\n      <span class=\"hero-title-accent\">ceden el control</span><br>\n      para sobrevivir.",
-    hero_sub:"// Un marco interdisciplinario para la acción humana bajo irreversibilidad percibida",
-    hero_desc:"Tafheena propone una descripción funcional del régimen de transición en el que la cognición deliberativa se atenúa mientras la acción adaptativa continúa — análogo al conmutación de garantía de tiempo de ejecución en ingeniería de seguridad crítica.",
-    btn_download:"↓ Descargar preimpresión\", btn_explore:\"Explorar el modelo ↗\", btn_collab:\"Colaborar →",
-    nav_framework:"Marco\", nav_about:\"Investigadora\", nav_preprint:\"Preimpresión",
-    nav_book:"Libros\", nav_writing:\"Artículos\", nav_collab:\"Colaborar",
-    sec_framework:"El marco <em>Tafheena</em>\", sec_about:\"Investigadora — <em>Yuliana Grasman</em>",
-    sec_preprint:"Preimpresiones <em>académicas</em>\", sec_books:\"Libros — <em>Serie Arquitectura de Supervivencia</em>",
-    sec_writing:"Escritos en <em>Medium</em>\", sec_contact:\"<em>Colaboración</em> de investigación",
-    side_status:"Estado\", side_status_val:\"● Preimpresión publicada · Feb 2026\", side_arch:\"Arquitectura de control",
-    state_h1:"H1 — Control deliberativo\", state_arr1:\"↓ umbral de irreversibilidad",
-    state_h3:"H3 — Capa de arbitraje\", state_arr2:\"↓ evento de transferencia\", state_h2:\"H2 — Continuidad procedimental",
-    side_criteria:"4 criterios operativos\", side_collab:\"Abierto a colaboración",
-    side_collab_list:"Investigación en simulación<br>Sistemas críticos para la seguridad<br>Neurociencia del estrés<br>Factores humanos / IHR<br>Aviación y cirugía",
-    fw_p1:"Los modelos existentes describen el rendimiento optimizado (flujo, NDM) o el colapso del sistema (congelación, disociación). El límite transicional entre estos estados carece de una descripción unificada.",
-    fw_p2:"Tafheena propone una arquitectura de transferencia de control de tres capas: una capa de control deliberativo (H1), una capa de continuidad procedimental (H2) y una capa de arbitraje (H3).",
-    fw_p3:"La irreversibilidad percibida — no solo el peligro — funciona como señal de ponderación. Cuando el sistema interpreta una situación como acercándose a un punto de no retorno, H3 transfiere la dominancia a H2.",
-    fw_flow:"Flujo — Optimización\", fw_freeze:\"Congelación — Colapso",
-    crit_ic_name:"Consecuencia irreversible\", crit_ic_desc:\"El actor percibe una pérdida significativa de opciones de restablecimiento. No peligro objetivo — inferencia subjetiva de margen correctivo decreciente.",
-    crit_tp_name:"Presión de tiempo\", crit_tp_desc:\"La ventana de decisión está comprimida por debajo de la capacidad de procesamiento deliberativo normal.",
-    crit_er_name:"Razonamiento explícito reducido\", crit_er_desc:\"La deliberación verbalizable se atenúa durante la ejecución de la acción. La explicación sigue retrospectivamente.",
-    crit_ac_name:"Continuidad de acción preservada\", crit_ac_desc:\"La coherencia motora y conductual permanece intacta o mejorada.",
-    bio_intro:"Yuliana Grasman es desarrolladora de marcos, autora e investigadora especializada en navegación interna, arquitectura de decisión y adaptación post-presión. Es la creadora de Graskheenics.",
-    bio_lineage:"La investigación de Grasman se basa en un linaje de varias décadas de disciplina fisiológica y psicológica.",
-    bio_lived:"Su principal resultado de investigación, el marco Tafheena, es una 'extracción vivida' derivada de más de una década de observación participante en el automovilismo del Golfo (2012–2023).",
-    bio_accident:"Este período proporcionó datos críticos sobre la navegación humana durante el colapso estructural y social.",
-    concept_tafheena:"Una condición límite donde la acción persiste a pesar del fallo de la cognición explicativa.",
-    concept_dm:"Un estado de riesgo donde los humanos intentan imitar la optimización reversible de máquinas en entornos físicos irreversibles.",
-    concept_grascode:"Una lógica operativa para reducir la fricción decisional y recalibrar la dirección después de la presión.",
-    epistemic:"Tafheena no fue derivada de marcos existentes sino posicionada retrospectivamente en relación con ellos.",
-    concept_stmt:"Una nueva arquitectura de estabilidad decisional humana en condiciones irreversibles.",
-    concept_body:"Dos marcos interconectados — Tafheena y GRASCODE — forman un modelo completo del comportamiento decisional humano bajo presión extrema.",
-    abs_tafheena:"Integrando perspectivas de la teoría del control, neurociencia del estrés y garantía de tiempo de ejecución, este artículo propone Tafheena como una capa de arbitraje conceptual que describe cómo la autoridad de control transita cuando las situaciones se acercan a la restricción irreversible.",
-    abs_grascode1:"GRASCODE es un marco de arquitectura de decisión estructurada diseñado para explicar y apoyar la acción humana en entornos donde las consecuencias son irreversibles y el tiempo es limitado.",
-    abs_grascode2:"La arquitectura identifica fases clave incluyendo reconocimiento de patrones, identificación de mecanismos, formación de elecciones, estabilización en ralentí y ejecución de decisión.",
-    contact_p1:"Tafheena es una hipótesis abierta. El marco requiere validación empírica a través de participantes independientes, dominios y modalidades de medición.",
-    contact_p2:"Particularmente interesada en colaboradores que puedan aportar paradigmas experimentales controlados a las firmas conductuales descritas en la preimpresión.",
-    col1:"Estudios basados en simulador de conducción o aviación midiendo firmas de transición de control",
-    col2:"Neurofisiología de transiciones prefrontal-a-procedimental bajo estrés agudo",
-    col3:"Factores humanos en entornos quirúrgicos o de respuesta de emergencia",
-    col4:"Interacción humano-IA y diseño de sistemas de reconocimiento de conmutación",
-    col5:"Validación transcultural de fenómenos de estado límite",
-  }
-};
-
-function toggleLangMenu() {
-  var m = document.getElementById('lang-menu');
-  m.style.display = m.style.display === 'none' ? 'block' : 'none';
-}
-document.addEventListener('click', function(e) {
-  if (!e.target.closest('.lang-switcher')) {
-    var m = document.getElementById('lang-menu');
-    if (m) m.style.display = 'none';
-  }
-});
-
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  document.querySelectorAll('[data-i18n]').forEach(function(el) {
-    var key = el.getAttribute('data-i18n');
-    if (T[lang] && T[lang][key]) el.innerHTML = T[lang][key];
-  });
-  // Reset all buttons
-  ['en','ru','ar','ja','ko','de','zh','fr','es'].forEach(function(l) {
-    var btn = document.getElementById('btn-' + l);
-    if (btn) btn.classList.toggle('active', l === lang);
-  });
-  // Update "More" button label if active lang is in dropdown
-  var dropLangs = ['ko','de','zh','fr','es'];
-  var moreBtn = document.getElementById('btn-more');
-  if (moreBtn) {
-    if (dropLangs.indexOf(lang) > -1) {
-      var labels = {ko:'한국어',de:'Deutsch',zh:'中文',fr:'Français',es:'Español'};
-      moreBtn.textContent = labels[lang] + ' ▾';
-      moreBtn.classList.add('active');
-    } else {
-      moreBtn.textContent = '▾ More';
-      moreBtn.classList.remove('active');
-    }
-  }
-  try { localStorage.setItem('lang', lang); } catch(e) {}
-}
-
-// Load saved preference
-try {
-  var saved = localStorage.getItem('lang');
-  if (saved && saved !== 'en') setLang(saved);
-} catch(e) {}
-</script>
-
-<script>
-function showPaper(name) {
-  // Hide all papers
-  document.getElementById('paper-tafheena').style.display = 'none';
-  document.getElementById('paper-grascode').style.display = 'none';
-  // Reset tabs
-  document.getElementById('tab-tafheena').style
 <script>
 function showPaper(name) {
   document.getElementById('paper-tafheena').style.display = 'none';
