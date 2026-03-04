@@ -803,11 +803,9 @@ footer {
       <div class="sys-dot"></div>
       <span data-i18n="hero_sys">BOUNDARY-STATE MODEL · CONTROL HANDOVER · IRREVERSIBLE CONSTRAINT</span>
     </div>
-    <h1 class="hero-title">
-      <span data-i18n="hero_t1">When systems</span><br>
-      <span class="hero-title-accent" data-i18n="hero_t2">hand over control</span><br>
-      <span data-i18n="hero_t3">to survive.</span>
-    </h1>
+    <h1 class="hero-title" data-i18n="hero_title">When systems<br>
+      <span class="hero-title-accent">hand over control</span><br>
+      to survive.</h1>
     <p class="hero-sub-line"><span data-i18n="hero_sub">// A cross-disciplinary framework for human action under perceived irreversibility</span></p>
     <p class="hero-desc" data-i18n="hero_desc">Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.</p>
     <div class="hero-ctas">
@@ -1433,7 +1431,7 @@ footer {
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Reveal on scroll — visible by default, animate if JS loads
 document.body.classList.add("js-loaded");
 const reveals = document.querySelectorAll(".reveal");
@@ -1449,7 +1447,7 @@ setTimeout(() => { document.querySelectorAll(".reveal").forEach(el => el.classLi
 var T = {
   en: {
     hero_sys:"BOUNDARY-STATE MODEL · CONTROL HANDOVER · IRREVERSIBLE CONSTRAINT",
-    hero_t1:"When systems\", hero_t2:\"hand over control\", hero_t3:\"to survive.",
+    hero_title:"When systems<br>\n      <span class=\"hero-title-accent\">hand over control</span><br>\n      to survive.",
     hero_sub:"// A cross-disciplinary framework for human action under perceived irreversibility",
     hero_desc:"Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.",
     btn_download:"↓ Download Preprint\", btn_explore:\"Explore the model ↗\", btn_collab:\"Collaborate →",
@@ -1491,11 +1489,10 @@ var T = {
     col3:"Human factors in surgical or emergency response environments",
     col4:"Human-AI interaction and failover recognition system design",
     col5:"Cross-cultural validation of boundary-state phenomena",
-    col6:"Operationalized comparison with flow, RPD, and freeze constructs"
   },
   ru: {
     hero_sys:"МОДЕЛЬ ГРАНИЧНОГО СОСТОЯНИЯ · ПЕРЕДАЧА УПРАВЛЕНИЯ · НЕОБРАТИМЫЕ ОГРАНИЧЕНИЯ",
-    hero_t1:"Когда системы\", hero_t2:\"передают управление\", hero_t3:\"чтобы выжить.",
+    hero_title:"Когда системы<br>\n      <span class=\"hero-title-accent\">передают управление</span><br>\n      чтобы выжить.",
     hero_sub:"// Междисциплинарная модель действий человека в условиях воспринимаемой необратимости",
     hero_desc:"Тафхина предлагает функциональное описание переходного режима, в котором обдуманное познание ослабевает, а адаптивное действие продолжается — по аналогии с механизмом переключения в системах безопасности. Расположенная между состоянием потока и заморозкой, она описывает этот переход как событие арбитража управления, а не инстинкт.",
     btn_download:"↓ Скачать препринт\", btn_explore:\"Изучить модель ↗\", btn_collab:\"Сотрудничество →",
@@ -1537,11 +1534,10 @@ var T = {
     col3:"Человеческие факторы в хирургических или аварийно-спасательных средах",
     col4:"Взаимодействие человека и ИИ и дизайн систем распознавания отказов",
     col5:"Кросс-культурная валидация феноменов граничного состояния",
-    col6:"Операционализированное сравнение с конструктами потока, RPD и заморозки"
   },
   ar: {
     hero_sys:"نموذج الحالة الحدّية · نقل التحكّم · القيد اللاعكوس",
-    hero_t1:"حين تضطرّ الأنظمة\", hero_t2:\"إلى التخلّي عن التحكّم\", hero_t3:\"لتبقى على قيد الحياة.",
+    hero_title:"حين تضطرّ الأنظمة<br>\n      <span class=\"hero-title-accent\">إلى التخلّي عن التحكّم</span><br>\n      لتبقى على قيد الحياة.",
     hero_sub:"// إطار متعدد التخصصات للفعل البشري في ظل اللاعكوسية المُدرَكَة",
     hero_desc:"تقترح تفحينة وصفاً وظيفياً للنظام الانتقالي الذي يتراجع فيه الإدراك التأملي بينما يستمر الفعل التكيّفي — على غرار آلية التبديل في هندسة الأنظمة الحرجة. تقع بين التدفق والتجمّد، وتُؤطّر هذا الانتقال بوصفه حدث تحكيم في السيطرة لا غريزةً.",
     btn_download:"↓ تحميل البحث المسبق\", btn_explore:\"استكشاف النموذج ↗\", btn_collab:\"تعاون →",
@@ -1583,12 +1579,10 @@ var T = {
     col3:"العوامل البشرية في بيئات الجراحة والاستجابة للطوارئ",
     col4:"تفاعل الإنسان مع الذكاء الاصطناعي وتصميم أنظمة التعرّف على الأعطال",
     col5:"التحقق المتعدد الثقافات من ظواهر الحالة الحدّية",
-    col6:"مقارنة مُشغَّلة مع تركيبات التدفق وRPD والتجمّد"
-  }
-,
+  },
   ja: {
     hero_sys:"境界状態モデル · 制御の引き渡し · 不可逆的制約",
-    hero_t1:"システムが\", hero_t2:\"制御を引き渡す\", hero_t3:\"生き残るために。",
+    hero_title:"システムが<br>\n      <span class=\"hero-title-accent\">制御を引き渡す</span><br>\n      生き残るために。",
     hero_sub:"// 知覚された不可逆性における人間行動の学際的フレームワーク",
     hero_desc:"タフィーナは、熟慮的認知が減衰しながら適応的行動が継続する移行体制の機能的記述を提案します — 安全クリティカルエンジニアリングにおけるランタイム保証フェイルオーバーに類似しています。フローとフリーズの間に位置し、この移行を本能ではなく制御調停イベントとして捉えます。",
     btn_download:"↓ プレプリントをダウンロード\", btn_explore:\"モデルを探索 ↗\", btn_collab:\"コラボレーション →",
@@ -1630,11 +1624,10 @@ var T = {
     col3:"外科または緊急対応環境におけるヒューマンファクター",
     col4:"人間とAIの相互作用とフェイルオーバー認識システム設計",
     col5:"境界状態現象の異文化検証",
-    col6:"フロー、RPD、フリーズ構成概念との運用化比較"
   },
   ko: {
     hero_sys:"경계 상태 모델 · 제어 이전 · 비가역적 제약",
-    hero_t1:"시스템이\", hero_t2:\"제어를 이전할 때\", hero_t3:\"생존하기 위해.",
+    hero_title:"시스템이<br>\n      <span class=\"hero-title-accent\">제어를 이전할 때</span><br>\n      생존하기 위해.",
     hero_sub:"// 지각된 비가역성에서 인간 행동에 대한 학제적 프레임워크",
     hero_desc:"타프히나는 심의적 인지가 감쇠하면서 적응적 행동이 지속되는 전환 체제의 기능적 설명을 제안합니다 — 안전 핵심 엔지니어링의 런타임 보증 페일오버와 유사합니다.",
     btn_download:"↓ 프리프린트 다운로드\", btn_explore:\"모델 탐색 ↗\", btn_collab:\"협업 →",
@@ -1676,11 +1669,10 @@ var T = {
     col3:"수술 또는 응급 대응 환경의 인간 요인",
     col4:"인간-AI 상호작용 및 페일오버 인식 시스템 설계",
     col5:"경계 상태 현상의 교차 문화 검증",
-    col6:"플로우, RPD, 동결 구성과의 운영화 비교"
   },
   de: {
     hero_sys:"GRENZZUSTANDSMODELL · STEUERUNGSÜBERGABE · IRREVERSIBLE EINSCHRÄNKUNG",
-    hero_t1:"Wenn Systeme\", hero_t2:\"die Kontrolle übergeben\", hero_t3:\"um zu überleben.",
+    hero_title:"Wenn Systeme<br>\n      <span class=\"hero-title-accent\">die Kontrolle übergeben</span><br>\n      um zu überleben.",
     hero_sub:"// Ein interdisziplinäres Rahmenwerk für menschliches Handeln unter wahrgenommener Irreversibilität",
     hero_desc:"Tafheena schlägt eine funktionale Beschreibung des Übergangsregimes vor, in dem deliberatives Denken nachlässt, während adaptives Handeln fortgesetzt wird — analog zum Runtime-Assurance-Failover im sicherheitskritischen Engineering.",
     btn_download:"↓ Preprint herunterladen\", btn_explore:\"Modell erkunden ↗\", btn_collab:\"Zusammenarbeiten →",
@@ -1722,11 +1714,10 @@ var T = {
     col3:"Menschliche Faktoren in chirurgischen oder Notfallumgebungen",
     col4:"Mensch-KI-Interaktion und Failover-Erkennungssystemdesign",
     col5:"Kulturübergreifende Validierung von Grenzzustandsphänomenen",
-    col6:"Operationalisierter Vergleich mit Flow-, RPD- und Freeze-Konstrukten"
   },
   zh: {
     hero_sys:"边界状态模型 · 控制交接 · 不可逆约束",
-    hero_t1:"当系统\", hero_t2:\"交出控制权\", hero_t3:\"以求生存。",
+    hero_title:"当系统<br>\n      <span class=\"hero-title-accent\">交出控制权</span><br>\n      以求生存。",
     hero_sub:"// 感知不可逆性下人类行为的跨学科框架",
     hero_desc:"塔芙希娜提出了一种功能性描述，描述深思熟虑的认知减弱而适应性行动持续的过渡机制——类似于安全关键工程中的运行时保证故障切换。",
     btn_download:"↓ 下载预印本\", btn_explore:\"探索模型 ↗\", btn_collab:\"合作 →",
@@ -1768,11 +1759,10 @@ var T = {
     col3:"外科或紧急响应环境中的人因工程",
     col4:"人机交互和故障切换识别系统设计",
     col5:"边界状态现象的跨文化验证",
-    col6:"与心流、RPD和冻结构念的操作化比较"
   },
   fr: {
     hero_sys:"MODÈLE D'ÉTAT LIMITE · TRANSFERT DE CONTRÔLE · CONTRAINTE IRRÉVERSIBLE",
-    hero_t1:"Quand les systèmes\", hero_t2:\"cèdent le contrôle\", hero_t3:\"pour survivre.",
+    hero_title:"Quand les systèmes<br>\n      <span class=\"hero-title-accent\">cèdent le contrôle</span><br>\n      pour survivre.",
     hero_sub:"// Un cadre interdisciplinaire pour l'action humaine sous irréversibilité perçue",
     hero_desc:"Tafheena propose une description fonctionnelle du régime de transition dans lequel la cognition délibérative s'atténue tandis que l'action adaptative se poursuit — analogue au basculement d'assurance d'exécution dans l'ingénierie critique pour la sécurité.",
     btn_download:"↓ Télécharger le préimpression\", btn_explore:\"Explorer le modèle ↗\", btn_collab:\"Collaborer →",
@@ -1814,11 +1804,10 @@ var T = {
     col3:"Facteurs humains dans les environnements chirurgicaux ou de réponse aux urgences",
     col4:"Interaction humain-IA et conception de systèmes de reconnaissance de basculement",
     col5:"Validation interculturelle des phénomènes d'état limite",
-    col6:"Comparaison opérationnalisée avec les construits de flow, RPD et gel"
   },
   es: {
     hero_sys:"MODELO DE ESTADO LÍMITE · TRANSFERENCIA DE CONTROL · RESTRICCIÓN IRREVERSIBLE",
-    hero_t1:"Cuando los sistemas\", hero_t2:\"ceden el control\", hero_t3:\"para sobrevivir.",
+    hero_title:"Cuando los sistemas<br>\n      <span class=\"hero-title-accent\">ceden el control</span><br>\n      para sobrevivir.",
     hero_sub:"// Un marco interdisciplinario para la acción humana bajo irreversibilidad percibida",
     hero_desc:"Tafheena propone una descripción funcional del régimen de transición en el que la cognición deliberativa se atenúa mientras la acción adaptativa continúa — análogo al conmutación de garantía de tiempo de ejecución en ingeniería de seguridad crítica.",
     btn_download:"↓ Descargar preimpresión\", btn_explore:\"Explorar el modelo ↗\", btn_collab:\"Colaborar →",
@@ -1860,7 +1849,6 @@ var T = {
     col3:"Factores humanos en entornos quirúrgicos o de respuesta de emergencia",
     col4:"Interacción humano-IA y diseño de sistemas de reconocimiento de conmutación",
     col5:"Validación transcultural de fenómenos de estado límite",
-    col6:"Comparación operacionalizada con construcciones de flujo, RPD y congelación"
   }
 };
 
@@ -1916,17 +1904,20 @@ function showPaper(name) {
   document.getElementById('paper-tafheena').style.display = 'none';
   document.getElementById('paper-grascode').style.display = 'none';
   // Reset tabs
+  document.getElementById('tab-tafheena').style
+<script>
+function showPaper(name) {
+  document.getElementById('paper-tafheena').style.display = 'none';
+  document.getElementById('paper-grascode').style.display = 'none';
   document.getElementById('tab-tafheena').style.borderBottomColor = 'transparent';
   document.getElementById('tab-tafheena').style.color = 'var(--text-dim)';
   document.getElementById('tab-grascode').style.borderBottomColor = 'transparent';
   document.getElementById('tab-grascode').style.color = 'var(--text-dim)';
-  // Show selected
   document.getElementById('paper-' + name).style.display = 'block';
   var tab = document.getElementById('tab-' + name);
   tab.style.borderBottomColor = name === 'grascode' ? '#ff6400' : 'var(--accent)';
   tab.style.color = name === 'grascode' ? '#ff6400' : 'var(--accent)';
 }
 </script>
-
 </body>
 </html>
