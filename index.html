@@ -51,7 +51,7 @@
       "author": {"@id": "https://graskheenics.org/#yuliana"},
       "datePublished": "2026-02",
       "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
-      "url": "https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1",
+      "url": "https://zenodo.org/records/19058136/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1",
       "keywords": ["boundary-state", "control handover", "runtime assurance", "irreversibility", "action continuity", "Tafheena"]
     },
     {
@@ -59,7 +59,7 @@
       "@id": "https://zenodo.org/records/18862327",
       "name": "GRASCODE: An Operational Architecture for Structured Decision Sequencing Following Boundary-State Control",
       "author": {"@id": "https://graskheenics.org/#yuliana"},
-      "datePublished": "2026-03-04",
+      "datePublished": "2026-03-17",
       "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
       "url": "https://zenodo.org/records/18862327",
       "keywords": ["GRASCODE", "decision making under pressure", "high-stakes decision making", "cognitive control transition", "human decision architecture", "aviation decision making", "human factors", "operational decision framework"]
@@ -763,7 +763,7 @@ footer {
     <p class="hero-sub-line"><span>// A cross-disciplinary framework for human action under perceived irreversibility</span></p>
     <p class="hero-desc">Tafheena proposes a functional description of the transitional regime in which deliberative cognition attenuates while adaptive action continues — analogous to runtime assurance failover in safety-critical engineering. Positioned between flow and freeze, it frames this transition as a control-arbitration event, not instinct.</p>
     <div class="hero-ctas">
-      <a href="https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download Preprint</a>
+      <a href="https://zenodo.org/records/19058136/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download Preprint</a>
       <a href="https://zenodo.org/records/18666477" target="_blank" class="btn btn-ghost">Explore the model ↗</a>
       <a href="mailto:contact@graskheenics.org" class="btn btn-ghost">Collaborate →</a>
     </div>
@@ -1003,42 +1003,88 @@ footer {
     <div id="paper-tafheena" class="reveal">
       <div class="preprint-layout">
         <div class="preprint-main">
+
+          <!-- TAGS -->
           <div style="display:flex; gap:0.8rem; align-items:center; margin-bottom:1rem; flex-wrap:wrap;">
             <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--accent); border:1px solid rgba(0,196,255,0.3); padding:0.2rem 0.7rem;">Boundary-State Model</div>
-            <div style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; color:var(--text-dim);">February 2026</div>
           </div>
+
+          <!-- TITLE -->
           <div class="preprint-title">Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint</div>
-          <p class="preprint-abstract">Integrating perspectives from control-theoretic accounts of motor regulation, stress neuroscience, naturalistic decision-making, and safety-critical engineering runtime assurance architectures, this paper proposes Tafheena as a conceptual arbitration layer describing how control authority transitions when situations approach irreversible constraint. The model defines operational characteristics, differentiates from related constructs, and outlines testable hypotheses for empirical investigation.</p>
-          <div class="preprint-meta">
-            <div class="meta-pair"><div class="meta-k">Author</div><div class="meta-v">Yuliana Grasman</div></div>
-            <div class="meta-pair"><div class="meta-k">Date</div><div class="meta-v">February 2026</div></div>
-            <div class="meta-pair"><div class="meta-k">DOI</div><div class="meta-v"><a href="https://doi.org/10.5281/zenodo.18666477" target="_blank" style="color:var(--accent);text-decoration:none;">10.5281/zenodo.18666477</a></div></div>
-            <div class="meta-pair"><div class="meta-k">License</div><div class="meta-v">CC BY-NC-ND 4.0</div></div>
+
+          <!-- VERSION TAB SWITCHER -->
+          <div style="display:flex; gap:0; margin:1.2rem 0 0; border-bottom:1px solid var(--border);">
+            <button onclick="showVersion('v2')" id="vtab-v2"
+              style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; padding:0.6rem 1.4rem; background:transparent; border:none; border-bottom:2px solid #d4af37; color:#d4af37; cursor:pointer; margin-bottom:-1px;">
+              v2 · Mar 2026
+            </button>
+            <button onclick="showVersion('v1')" id="vtab-v1"
+              style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.14em; text-transform:uppercase; padding:0.6rem 1.4rem; background:transparent; border:none; border-bottom:2px solid transparent; color:var(--text-dim); cursor:pointer; margin-bottom:-1px;">
+              v1 · Feb 2026
+            </button>
           </div>
-          <div style="margin-bottom:1.8rem; background:var(--bg); border:1px solid var(--border); padding:1.2rem 1.5rem;">
-            <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); margin-bottom:0.8rem; display:flex; justify-content:space-between; align-items:center;">
-              <span>// APA Citation</span>
-              <button id="cite-1" onclick="navigator.clipboard.writeText('Grasman, Y. (2026). Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint. Zenodo. https://doi.org/10.5281/zenodo.18666477').then(()=>{document.getElementById('cite-1').textContent='Copied!';setTimeout(()=>document.getElementById('cite-1').textContent='Copy',2000)})"
-                      style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; background:transparent; border:1px solid rgba(0,196,255,0.3); color:var(--accent); padding:0.3rem 0.8rem; cursor:pointer;">Copy</button>
+
+          <!-- VERSION 2 PANEL -->
+          <div id="vpanel-v2" style="display:block;">
+            <p class="preprint-abstract" style="margin-top:1.2rem;">Expanded framework introducing Tafheena as a human–AI boundary condition. Adds operationalized indices, differential predictions, falsification criteria, and the Dangerous Middle hypothesis — a transitional risk state where humans approximate algorithmic reasoning while remaining subject to irreversible embodied consequence.</p>
+            <div class="preprint-meta">
+              <div class="meta-pair"><div class="meta-k">Author</div><div class="meta-v">Yuliana Grasman</div></div>
+              <div class="meta-pair"><div class="meta-k">Date</div><div class="meta-v">March 2026</div></div>
+              <div class="meta-pair"><div class="meta-k">DOI</div><div class="meta-v"><a href="https://doi.org/10.5281/zenodo.19058136" target="_blank" style="color:#d4af37;text-decoration:none;">10.5281/zenodo.19058136</a></div></div>
+              <div class="meta-pair"><div class="meta-k">License</div><div class="meta-v">CC BY-NC-ND 4.0</div></div>
             </div>
-            <p style="font-family:var(--mono); font-size:0.72rem; line-height:1.8; color:var(--text); word-break:break-all;">Grasman, Y. (2026). <em>Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.18666477" target="_blank" style="color:var(--accent);text-decoration:none;">https://doi.org/10.5281/zenodo.18666477</a></p>
+            <!-- CITATION v2 -->
+            <div style="margin-bottom:1.8rem; background:var(--bg); border:1px solid var(--border); padding:1.2rem 1.5rem;">
+              <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); margin-bottom:0.8rem; display:flex; justify-content:space-between; align-items:center;">
+                <span>// APA Citation — v2</span>
+                <button id="cite-1v2" onclick="navigator.clipboard.writeText('Grasman, Y. (2026). Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint (Version v2). Zenodo. https://doi.org/10.5281/zenodo.19058136').then(()=>{document.getElementById('cite-1v2').textContent='Copied!';setTimeout(()=>document.getElementById('cite-1v2').textContent='Copy',2000)})"
+                  style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; background:transparent; border:1px solid rgba(212,175,55,0.4); color:#d4af37; padding:0.3rem 0.8rem; cursor:pointer;">Copy</button>
+              </div>
+              <p style="font-family:var(--mono); font-size:0.72rem; line-height:1.8; color:var(--text); word-break:break-all;">Grasman, Y. (2026). <em>Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint</em> (Version v2). Zenodo. <a href="https://doi.org/10.5281/zenodo.19058136" target="_blank" style="color:#d4af37;text-decoration:none;">https://doi.org/10.5281/zenodo.19058136</a></p>
+            </div>
+            <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+              <a href="https://zenodo.org/records/19058136/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download v2 PDF</a>
+              <a href="https://zenodo.org/records/19058136" target="_blank" class="btn btn-ghost" style="border-color:rgba(212,175,55,0.5); color:#d4af37;">View on Zenodo ↗</a>
+            </div>
           </div>
-          <a href="https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download PDF</a>
-          <a href="https://zenodo.org/records/18666477" target="_blank" class="btn btn-ghost" style="margin-left:0.8rem;">View on Zenodo ↗</a>
+
+          <!-- VERSION 1 PANEL -->
+          <div id="vpanel-v1" style="display:none;">
+            <p class="preprint-abstract" style="margin-top:1.2rem;">Original preprint. Integrating perspectives from control-theoretic accounts of motor regulation, stress neuroscience, naturalistic decision-making, and safety-critical engineering runtime assurance architectures, this paper proposes Tafheena as a conceptual arbitration layer describing how control authority transitions when situations approach irreversible constraint. Defines operational characteristics, differentiates from related constructs, and outlines testable hypotheses.</p>
+            <div class="preprint-meta">
+              <div class="meta-pair"><div class="meta-k">Author</div><div class="meta-v">Yuliana Grasman</div></div>
+              <div class="meta-pair"><div class="meta-k">Date</div><div class="meta-v">February 2026</div></div>
+              <div class="meta-pair"><div class="meta-k">DOI</div><div class="meta-v"><a href="https://doi.org/10.5281/zenodo.18666477" target="_blank" style="color:var(--accent);text-decoration:none;">10.5281/zenodo.18666477</a></div></div>
+              <div class="meta-pair"><div class="meta-k">License</div><div class="meta-v">CC BY-NC-ND 4.0</div></div>
+            </div>
+            <!-- CITATION v1 -->
+            <div style="margin-bottom:1.8rem; background:var(--bg); border:1px solid var(--border); padding:1.2rem 1.5rem;">
+              <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); margin-bottom:0.8rem; display:flex; justify-content:space-between; align-items:center;">
+                <span>// APA Citation — v1</span>
+                <button id="cite-1v1" onclick="navigator.clipboard.writeText('Grasman, Y. (2026). Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint. Zenodo. https://doi.org/10.5281/zenodo.18666477').then(()=>{document.getElementById('cite-1v1').textContent='Copied!';setTimeout(()=>document.getElementById('cite-1v1').textContent='Copy',2000)})"
+                  style="font-family:var(--mono); font-size:0.55rem; letter-spacing:0.12em; text-transform:uppercase; background:transparent; border:1px solid rgba(0,196,255,0.3); color:var(--accent); padding:0.3rem 0.8rem; cursor:pointer;">Copy</button>
+              </div>
+              <p style="font-family:var(--mono); font-size:0.72rem; line-height:1.8; color:var(--text); word-break:break-all;">Grasman, Y. (2026). <em>Tafheena: A Boundary-State Model of Control Handover Under Irreversible Constraint</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.18666477" target="_blank" style="color:var(--accent);text-decoration:none;">https://doi.org/10.5281/zenodo.18666477</a></p>
+            </div>
+            <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+              <a href="https://zenodo.org/records/18666477/files/Tafheena_A_Boundary-State_Model_of_Control_Handover_Under_Irreversible_Constraint.pdf?download=1" target="_blank" class="btn btn-primary">↓ Download v1 PDF</a>
+              <a href="https://zenodo.org/records/18666477" target="_blank" class="btn btn-ghost">View on Zenodo ↗</a>
+            </div>
+          </div>
+
         </div>
         <div class="preprint-sidebar">
-          <div class="preprint-stat"><div class="stat-n">H1</div><div class="stat-l">Internal Continuity</div></div>
-          <div class="preprint-stat"><div class="stat-n">H2</div><div class="stat-l">Trigger Point</div></div>
+          <div class="preprint-stat"><div class="stat-n">H1</div><div class="stat-l">Deliberative Control</div></div>
+          <div class="preprint-stat"><div class="stat-n">H2</div><div class="stat-l">Procedural Continuity</div></div>
           <div class="preprint-stat"><div class="stat-n">H3</div><div class="stat-l">Arbitration Layer</div></div>
-          <div class="preprint-stat"><div class="stat-n">H4</div><div class="stat-l">Action Continuity</div></div>
+          <div class="preprint-stat"><div class="stat-n">v2</div><div class="stat-l" style="color:#d4af37;">+ Dangerous Middle</div></div>
           <div style="margin-top:1rem; padding:1rem; border:1px solid var(--border); font-family:var(--mono); font-size:0.58rem; line-height:1.8; color:var(--text-dim);">
             Keywords<br>
-            <span style="color:var(--text);">boundary-state · control handover · irreversibility · cognitive control · human factors · runtime assurance</span>
+            <span style="color:var(--text);">boundary-state · control handover · irreversibility · cognitive control · human factors · runtime assurance · human-AI boundary</span>
           </div>
         </div>
       </div>
     </div>
-
     <!-- PAPER 2 — GRASCODE -->
     <div id="paper-grascode" class="reveal" style="display:none;">
       <div class="preprint-layout">
@@ -1377,6 +1423,48 @@ footer {
       <span class="sec-tag" style="border-color:rgba(212,175,55,0.3); color:rgba(212,175,55,0.6);">Open Collective · Coming Soon</span>
     </div>
 
+    <!-- WHO IS BEHIND THIS -->
+    <div class="reveal" style="margin-bottom:3rem; border:1px solid rgba(212,175,55,0.25); background:rgba(212,175,55,0.03);">
+
+      <!-- CREDENTIAL STRIP -->
+      <div style="display:flex; flex-wrap:wrap; gap:0; border-bottom:1px solid rgba(212,175,55,0.2);">
+        <div style="padding:0.7rem 1.3rem; border-right:1px solid rgba(212,175,55,0.2); font-family:var(--mono); font-size:0.55rem; letter-spacing:0.15em; text-transform:uppercase; color:#d4af37;">
+          ◈ UAE Mudcross Champion 2017
+        </div>
+        <div style="padding:0.7rem 1.3rem; border-right:1px solid rgba(212,175,55,0.2); font-family:var(--mono); font-size:0.55rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim);">
+          First Female 4×4 Freestyle Drifter in the GCC
+        </div>
+        <div style="padding:0.7rem 1.3rem; border-right:1px solid rgba(212,175,55,0.2); font-family:var(--mono); font-size:0.55rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim);">
+          Regal Summit Book Award Winner
+        </div>
+        <div style="padding:0.7rem 1.3rem; font-family:var(--mono); font-size:0.55rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-dim);">
+          Independent Researcher · ORCID Verified
+        </div>
+      </div>
+
+      <!-- MAIN BIO NOTE -->
+      <div style="padding:2rem 2.5rem; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem;">
+        <div>
+          <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.22em; text-transform:uppercase; color:#d4af37; margin-bottom:1rem;">// The origin of the research</div>
+          <p style="font-size:0.92rem; line-height:1.85; color:var(--text); margin-bottom:1rem;">At 15, she snuck out of her family home to enter her first underground drag race — and won. Against an all-male lineup. She drove a black car with tinted windows so no one would see a girl behind the wheel. The prize was announced on stage. Nobody came to collect it.</p>
+          <p style="font-size:0.92rem; line-height:1.85; color:var(--text);">A decade later, competing in the deserts of the Gulf, she became the <strong style="color:#d4af37; font-weight:400;">first female 4×4 freestyle drifter in the GCC</strong> — documented in Khaleej Times, Bazaar Kuwait, and regional media. Her track name, <em style="color:#d4af37;">Afra</em>, was given to her by the Arab racing community. It means land never touched by a person.</p>
+        </div>
+        <div>
+          <div style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.22em; text-transform:uppercase; color:#d4af37; margin-bottom:1rem;">// From the track to the framework</div>
+          <p style="font-size:0.92rem; line-height:1.85; color:var(--text); margin-bottom:1rem;">In 2017, a high-impact accident during competition became the inflection point. Not the end — the data source. The question that followed was not about recovery. It was about what happened inside the moment where consequence became irreversible and the body continued anyway.</p>
+          <p style="font-size:0.92rem; line-height:1.85; color:var(--text);">That question, held for years before it had language, became <strong style="color:#d4af37; font-weight:400;">Tafheena</strong>. The research that followed became <strong style="color:#d4af37; font-weight:400;">Graskheenics</strong>. No institution funded it. No university housed it. It came from inside irreversible consequence — which is exactly what it studies.</p>
+        </div>
+      </div>
+
+      <!-- PRESS LINKS -->
+      <div style="padding:1rem 2.5rem 1.5rem; display:flex; gap:1.2rem; flex-wrap:wrap; align-items:center; border-top:1px solid rgba(212,175,55,0.15);">
+        <span style="font-family:var(--mono); font-size:0.52rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim);">// Verified coverage</span>
+        <a href="https://www.khaleejtimes.com/uae/meet-the-first-lady-of-freestyle-drifting-in-uae" target="_blank" style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.1em; color:#d4af37; text-decoration:none; border:1px solid rgba(212,175,55,0.3); padding:0.35rem 0.9rem; transition:all 0.15s;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Khaleej Times 2018 ↗</a>
+        <a href="https://bazaar.town/racing-through-barriers/" target="_blank" style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.1em; color:#d4af37; text-decoration:none; border:1px solid rgba(212,175,55,0.3); padding:0.35rem 0.9rem; transition:all 0.15s;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Bazaar Kuwait 2019 ↗</a>
+        <a href="https://regalsummitbookaward.com/winners" target="_blank" style="font-family:var(--mono); font-size:0.6rem; letter-spacing:0.1em; color:#d4af37; text-decoration:none; border:1px solid rgba(212,175,55,0.3); padding:0.35rem 0.9rem; transition:all 0.15s;" onmouseover="this.style.background='rgba(212,175,55,0.1)'" onmouseout="this.style.background='transparent'">Regal Summit Award ↗</a>
+      </div>
+    </div>
+
     <div class="reveal" style="max-width:680px; margin:0 auto 3rem; text-align:center;">
       <p style="font-size:1rem; line-height:1.8; color:var(--text);">Tafheena and GRASCODE are developed entirely as independent research — no institutional funding, no university affiliation. If this work is relevant to your field or practice, membership directly enables the next paper, case study, and framework expansion.</p>
     </div>
@@ -1496,16 +1584,16 @@ footer {
 
 <div class="ticker">
   <div class="ticker-inner">
-    <span class="ticker-item"><span>TAFHEENA</span>Boundary-state model · Control handover under irreversible constraint</span>
+    <span class="ticker-item"><span>TAFHEENA v2</span>Updated March 2026 · Boundary-state model · Control handover under irreversible constraint</span>
     <span class="ticker-item"><span>GRASCODE</span>Operational architecture for structured decision sequencing</span>
+    <span class="ticker-item"><span>AFRA</span>First female 4×4 freestyle drifter in the GCC · UAE Mudcross Champion 2017</span>
     <span class="ticker-item"><span>H3</span>Arbitration Layer · Salience / Irreversibility Gate</span>
-    <span class="ticker-item"><span>CRITERIA</span>IC + TP + ER↓ + AC↑ = Tafheena-like episode</span>
     <span class="ticker-item"><span>MEMBERSHIP</span>Graskheenics Research · Gumroad · Join Now</span>
     <span class="ticker-item"><span>PREPRINT</span>March 2026 · CC BY-NC-ND 4.0 · Yuliana Grasman</span>
-    <span class="ticker-item"><span>TAFHEENA</span>Boundary-state model · Control handover under irreversible constraint</span>
+    <span class="ticker-item"><span>TAFHEENA v2</span>Updated March 2026 · Boundary-state model · Control handover under irreversible constraint</span>
     <span class="ticker-item"><span>GRASCODE</span>Operational architecture for structured decision sequencing</span>
+    <span class="ticker-item"><span>AFRA</span>First female 4×4 freestyle drifter in the GCC · UAE Mudcross Champion 2017</span>
     <span class="ticker-item"><span>H3</span>Arbitration Layer · Salience / Irreversibility Gate</span>
-    <span class="ticker-item"><span>CRITERIA</span>IC + TP + ER↓ + AC↑ = Tafheena-like episode</span>
   </div>
 </div>
 
@@ -1519,6 +1607,21 @@ reveals.forEach(function(r) { obs.observe(r); });
 setTimeout(function() {
   document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
 }, 600);
+</script>
+
+<script>
+function showVersion(ver) {
+  document.getElementById('vpanel-v1').style.display = 'none';
+  document.getElementById('vpanel-v2').style.display = 'none';
+  document.getElementById('vtab-v1').style.borderBottomColor = 'transparent';
+  document.getElementById('vtab-v1').style.color = 'var(--text-dim)';
+  document.getElementById('vtab-v2').style.borderBottomColor = 'transparent';
+  document.getElementById('vtab-v2').style.color = 'var(--text-dim)';
+  document.getElementById('vpanel-' + ver).style.display = 'block';
+  var tab = document.getElementById('vtab-' + ver);
+  tab.style.borderBottomColor = ver === 'v2' ? '#d4af37' : 'var(--accent)';
+  tab.style.color = ver === 'v2' ? '#d4af37' : 'var(--accent)';
+}
 </script>
 
 <script>
