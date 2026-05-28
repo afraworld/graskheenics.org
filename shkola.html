@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Школа Graskheenics — Интеллектуальный адреналин</title>
+<meta name="description" content="Первая в мире школа навигации под давлением, решений и механизмов человека.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+
+:root{
+  --bg:   #0f0e0b;
+  --bg2:  #161410;
+  --bg3:  #1d1b16;
+  --amber:#c48616;
+  --amber2:#e0a030;
+  --cream:#eeeae2;
+  --grey: #7a7568;
+  --low:  #4a4640;
+  --border: rgba(196,134,22,0.18);
+  --border2: rgba(196,134,22,0.1);
+  --serif:'DM Serif Display',serif;
+  --mono: 'DM Mono',monospace;
+  --sans: 'Work Sans',sans-serif;
+}
+
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);font-weight:400;line-height:1.7;overflow-x:hidden;}
+
+/* SPONSOR BAR */
+#sbar{
+  position:fixed;top:0;left:0;right:0;z-index:301;
+  height:34px;background:rgba(196,134,22,0.08);
+  border-bottom:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;gap:2.5rem;
+}
+#sbar span{font-family:var(--mono);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,134,22,.6);}
+#sbar a{font-family:var(--mono);font-size:.42rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(196,134,22,.35);padding-bottom:1px;}
+#sbar a:hover{color:var(--amber2);}
+
+/* NAV */
+nav{
+  position:fixed;top:34px;left:0;right:0;z-index:200;
+  background:rgba(15,14,11,0.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;height:50px;
+}
+.nav-logo{font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);text-decoration:none;}
+.nav-center{display:flex;align-items:center;gap:0;}
+.nav-center a,.nav-center span{
+  font-family:var(--mono);font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:0 .9rem;height:50px;display:flex;align-items:center;
+  border-right:1px solid var(--border2);text-decoration:none;transition:color .15s;
+}
+.nav-center a:first-child{border-left:1px solid var(--border2);}
+.nav-center a{color:var(--grey);}
+.nav-center a:hover{color:var(--amber);}
+.nav-switcher{display:flex;align-items:center;border:1px solid var(--border);margin-left:1.2rem;}
+.nav-switcher a,.nav-switcher span{font-family:var(--mono);font-size:.42rem;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .8rem;text-decoration:none;transition:all .15s;}
+.nav-switcher a{color:var(--grey);border-right:1px solid var(--border);}
+.nav-switcher a:hover{color:var(--amber);}
+.nav-switcher span{color:var(--amber);background:rgba(196,134,22,.08);}
+
+/* HERO */
+#hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  justify-content:center;align-items:flex-start;
+  padding:calc(84px + 5rem) 3rem 5rem;
+  max-width:1080px;margin:0 auto;
+}
+.eyebrow{font-family:var(--mono);font-size:.46rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--amber);}
+h1{font-family:var(--serif);font-size:clamp(3rem,5.5vw,6rem);line-height:1.05;color:var(--cream);margin-bottom:1.4rem;}
+h1 em{font-style:italic;color:var(--amber);}
+.hero-sub{font-size:1.1rem;color:var(--grey);max-width:520px;margin-bottom:2.8rem;line-height:1.7;}
+.btn-row{display:flex;gap:.8rem;}
+.btn-amber{padding:.8rem 2rem;background:var(--amber);color:var(--bg);font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .15s;}
+.btn-amber:hover{background:var(--amber2);}
+.btn-ghost{padding:.8rem 2rem;border:1px solid var(--border);color:var(--grey);font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:all .15s;}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:0 3rem;}
+section{padding:6rem 0;border-top:1px solid var(--border2);}
+
+.sec-label{font-family:var(--mono);font-size:.44rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(196,134,22,.5);margin-bottom:1.6rem;display:flex;align-items:center;gap:.9rem;}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border);max-width:80px;}
+
+h2{font-family:var(--serif);font-size:clamp(2rem,3.2vw,3rem);font-weight:400;color:var(--cream);line-height:1.18;margin-bottom:1rem;}
+h2 em{font-style:italic;color:var(--amber);}
+.body{font-size:.92rem;line-height:1.9;color:#a09888;margin-bottom:.9rem;}
+
+/* MANIFESTO */
+#manifesto{background:var(--bg);}
+.manifesto-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
+.manifesto-sticky{position:sticky;top:100px;}
+.pull{font-family:var(--serif);font-size:1.5rem;font-style:italic;color:var(--amber);border-left:2px solid var(--amber);padding-left:1.4rem;margin:2rem 0;line-height:1.5;}
+.tag-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;}
+.tag{font-family:var(--mono);font-size:.42rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--border2);padding:.24rem .7rem;color:var(--grey);}
+.tag-amber{color:var(--amber);border-color:rgba(196,134,22,.3);background:rgba(196,134,22,.06);}
+
+/* BEFORE / AFTER */
+#ba{background:var(--bg2);}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:3rem;}
+.ba-col{padding:2.6rem 2.2rem;}
+.ba-before{background:var(--bg2);}
+.ba-after{background:var(--bg3);}
+.ba-head{font-family:var(--mono);font-size:.42rem;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);margin-bottom:1.4rem;padding-bottom:.7rem;border-bottom:1px solid var(--border2);}
+.ba-after .ba-head{color:rgba(196,134,22,.55);}
+.ba-list{list-style:none;}
+.ba-list li{display:flex;gap:.8rem;padding:.62rem 0;border-bottom:1px solid var(--border2);font-size:.87rem;color:#8a8070;line-height:1.7;}
+.ba-list li:last-child{border-bottom:none;}
+.ba-after .ba-list li{color:#a09080;border-bottom-color:rgba(196,134,22,.1);}
+.ba-dash{color:var(--low);font-family:var(--mono);font-size:.5rem;padding-top:.2rem;flex-shrink:0;}
+.ba-diamond{color:var(--amber);font-size:.5rem;padding-top:.2rem;flex-shrink:0;}
+.ba-foot{background:var(--bg3);padding:2.2rem 2.6rem;grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.ba-quote{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:rgba(238,234,226,.6);line-height:1.7;}
+.ba-transforms{display:flex;flex-direction:column;gap:.55rem;justify-content:center;}
+.ba-row{display:flex;align-items:baseline;gap:1rem;padding:.32rem 0;border-bottom:1px solid rgba(196,134,22,.1);}
+.ba-key{font-family:var(--mono);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);min-width:76px;}
+.ba-val{font-size:.86rem;color:rgba(216,208,188,.55);}
+
+/* STAGES */
+#stages{background:var(--bg);}
+.stages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:3rem;}
+.stage{background:var(--bg);padding:1.6rem 1.4rem;transition:background .2s;}
+.stage:hover{background:var(--bg2);}
+.stage-n{font-family:var(--mono);font-size:.4rem;letter-spacing:.1em;color:rgba(196,134,22,.4);margin-bottom:.4rem;}
+.stage-l{font-family:var(--serif);font-size:2.2rem;color:var(--amber);line-height:1;margin-bottom:.4rem;opacity:.55;}
+.stage-name{font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);margin-bottom:.5rem;}
+.stage-desc{font-size:.75rem;color:var(--grey);line-height:1.6;}
+
+/* HELPS */
+#helps{background:var(--bg2);}
+.helps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:2.5rem;}
+.help{background:var(--bg2);padding:1.5rem;transition:background .2s;}
+.help:hover{background:var(--bg3);}
+.help-dot{width:4px;height:4px;border-radius:50%;background:var(--amber);margin-bottom:.8rem;}
+.help-text{font-size:.82rem;color:var(--grey);line-height:1.65;}
+
+/* LEVEL 1 */
+#level1{background:var(--bg);}
+.level-grid{display:grid;grid-template-columns:1fr 300px;gap:3.5rem;align-items:start;}
+.level-badge{display:inline-block;font-family:var(--mono);font-size:.44rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(196,134,22,.3);padding:.26rem .8rem;background:rgba(196,134,22,.06);margin-bottom:1rem;}
+.include-list{list-style:none;margin-top:1.4rem;}
+.include-list li{display:flex;align-items:flex-start;gap:.6rem;padding:.5rem 0;border-bottom:1px solid var(--border2);font-size:.84rem;color:var(--grey);line-height:1.6;}
+.include-list li:last-child{border-bottom:none;}
+.include-list li::before{content:'—';color:var(--amber);font-family:var(--mono);font-size:.46rem;padding-top:.12rem;flex-shrink:0;}
+.price-card{border:1px solid var(--border);padding:1.8rem;background:rgba(196,134,22,.04);}
+.price{font-family:var(--serif);font-size:4rem;color:var(--amber);line-height:1;margin-bottom:.4rem;}
+.price-note{font-family:var(--mono);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);margin-bottom:1.8rem;}
+.buy{display:block;width:100%;padding:.9rem;background:rgba(196,134,22,.12);border:1px solid var(--amber);font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);text-align:center;text-decoration:none;margin-bottom:1.2rem;transition:all .15s;}
+.buy:hover{background:rgba(196,134,22,.25);}
+.cert-steps{list-style:none;counter-reset:cs;margin-top:1.2rem;}
+.cert-steps li{counter-increment:cs;display:flex;gap:.7rem;padding:.55rem 0;border-bottom:1px solid var(--border2);font-size:.78rem;color:var(--grey);line-height:1.6;}
+.cert-steps li:last-child{border-bottom:none;}
+.cert-steps li::before{content:counter(cs);font-family:var(--mono);font-size:.5rem;color:var(--amber);min-width:12px;padding-top:.06rem;}
+.cert-note{margin-top:1rem;font-size:.75rem;color:var(--low);line-height:1.65;font-style:italic;}
+
+/* LICENSING */
+#licensing{background:var(--bg2);}
+.lic-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.lic-rule{font-family:var(--serif);font-size:1.4rem;font-style:italic;color:var(--amber);border-left:2px solid rgba(196,134,22,.35);padding-left:1.4rem;margin:1.8rem 0;line-height:1.6;}
+.lic-btn{display:inline-flex;align-items:center;gap:.8rem;border:1px solid var(--amber);color:var(--amber);font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;padding:.72rem 1.5rem;text-decoration:none;margin-top:.8rem;transition:all .15s;}
+.lic-btn:hover{background:rgba(196,134,22,.1);}
+.lic-btn::after{content:'→';}
+
+/* ORIGIN */
+#origin{background:var(--bg3);}
+.origin-grid{display:grid;grid-template-columns:100px 1fr;gap:4rem;align-items:start;}
+.origin-yr{font-family:var(--serif);font-size:4rem;color:rgba(196,134,22,.12);line-height:1;letter-spacing:-.02em;}
+.origin-quote{font-family:var(--serif);font-size:1.25rem;font-style:italic;color:rgba(238,234,226,.55);line-height:1.7;border-left:2px solid rgba(196,134,22,.28);padding-left:1.4rem;margin-bottom:1.6rem;}
+.origin-body{font-size:.87rem;color:rgba(216,208,188,.5);line-height:1.9;margin-bottom:.8rem;}
+.creds{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem;}
+.cred{font-family:var(--mono);font-size:.42rem;letter-spacing:.09em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(196,134,22,.24);padding:.24rem .7rem;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border2);padding:2rem 0;}
+.foot-inner{display:flex;justify-content:space-between;align-items:center;}
+.foot-logo{font-family:var(--mono);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);}
+.foot-note{font-size:.72rem;color:var(--low);line-height:1.6;text-align:right;}
+
+@media(max-width:768px){
+  nav{padding:0 1.4rem;}
+  .nav-center{display:none;}
+  #hero{padding-left:1.5rem;padding-right:1.5rem;}
+  .wrap{padding:0 1.5rem;}
+  .manifesto-grid,.ba-grid,.ba-foot,.level-grid,.lic-grid,.origin-grid{grid-template-columns:1fr;gap:2rem;}
+  .stages-grid{grid-template-columns:1fr 1fr;}
+  .helps-grid{grid-template-columns:1fr 1fr;}
+  .foot-inner{flex-direction:column;gap:1rem;text-align:center;}
+  .foot-note{text-align:center;}
+  section{padding:4rem 0;}
+}
+</style>
+</head>
+<body>
+
+<!-- SPONSOR BAR -->
+<div id="sbar">
+  <span>Независимые исследования · Финансирование основателя · Без институции</span>
+  <a href="mailto:research@graskheenics.org">Стать спонсором →</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/">GRASKHEENICS</a>
+  <div class="nav-center">
+    <a href="#manifesto">Школа</a>
+    <a href="#stages">GRASCODE</a>
+    <a href="#level1">Уровень 1</a>
+    <a href="#licensing">Лицензирование</a>
+    <a href="#origin">Автор</a>
+    <a href="mailto:research@graskheenics.org">Контакт</a>
+  </div>
+  <div class="nav-switcher">
+    <a href="/">Tafheena</a>
+    <span>Школа</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="max-width:1080px;margin:0 auto;">
+  <section id="hero" style="border:none;padding:calc(84px + 5rem) 3rem 5rem;max-width:none;">
+    <div class="eyebrow">Первая школа такого рода в мире</div>
+    <h1>Навигация под давлением,<br>решений и<br><em>механизмов человека.</em></h1>
+    <p class="hero-sub">Интеллектуальный адреналин. Контролируемое направление.<br>Читай паттерн до последствий.</p>
+    <div class="btn-row">
+      <a class="btn-amber" href="#level1">Begin Уровень 1</a>
+      <a class="btn-ghost" href="#manifesto">Что такое эта школа</a>
+    </div>
+  </section>
+</div>
+
+<!-- MANIFESTO -->
+<section id="manifesto">
+  <div class="wrap">
+    <div class="manifesto-grid">
+      <div class="manifesto-sticky">
+        <div class="sec-label">Что это такое</div>
+        <h2>Школа<br>для момента<br><em>до удара.</em></h2>
+      </div>
+      <div>
+        <p class="body">Есть вещи которые люди обычно узнают слишком поздно. После разрушения. После неверного решения. После того как паттерн повторился снова.</p>
+        <p class="body">Большинство людей не учатся навигации в комфорте. Они учатся когда жизнь ставит их на край — когда давление берёт верх, когда колебание становится дорогостоящим, когда один неверный шаг меняет всё.</p>
+        <div class="pull">"Можешь ли ты прочитать момент до того как он изменится?<br>Можешь ли ты почувствовать сдвиг до того как ущерб нанесён?"</div>
+        <p class="body">Graskheenics начинается в точке где жизнь становится нестабильной — и тебе всё ещё нужно выбрать свою линию. Не в мотивации. Не в мягких советах. В структурном чтении.</p>
+        <p class="body">Давление имеет ритм. Хаос имеет направление. Риск имеет сигналы. У людей есть механизмы. Решения имеют момент. <strong style="color:var(--cream);">Если ты научишься читать эти слои — жизнь перестаёт ощущаться как случайный удар. Она становится навигацией.</strong></p>
+        <div class="tag-row">
+          <span class="tag">Не терапия</span>
+          <span class="tag">Не диагностика</span>
+          <span class="tag">Не общий self-help</span>
+          <span class="tag tag-amber">Структурная навигация</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="ba">
+  <div class="wrap">
+    <div class="sec-label">Что меняется</div>
+    <h2>Что меняется when you<br><em>learn Graskheenics?</em></h2>
+    <div class="ba-grid">
+      <div class="ba-col ba-before">
+        <div class="ba-head">До</div>
+        <ul class="ba-list">
+          <li><span class="ba-dash">—</span>Что-то ощущается неправильным. Человек не может прочитать что реально движется.</li>
+          <li><span class="ba-dash">—</span>Новые ситуации повторяют тот же паттерн с другим лицом. Это не распознаётся пока ущерб не накоплен.</li>
+          <li><span class="ba-dash">—</span>Химия принимается за стабильность. Тишина за покой. Извинение за ответственность. Страх за интуицию.</li>
+          <li><span class="ba-dash">—</span>Давление производит реакцию — без видения где система реально ломается.</li>
+          <li><span class="ba-dash">—</span>Другая жизнь кажется возможной — но направление неясно и давление высокое.</li>
+        </ul>
+      </div>
+      <div class="ba-col ba-after">
+        <div class="ba-head">После</div>
+        <ul class="ba-list">
+          <li><span class="ba-diamond">◈</span>Ситуации читаются через структуру, а не только через эмоции. Движение становится видимым до того как реакция берёт верх.</li>
+          <li><span class="ba-diamond">◈</span>Паттерны распознаются раньше — до глубокого вложения, до того как ущерб делает выход дорогостоящим.</li>
+          <li><span class="ba-diamond">◈</span>После difficult situations, the person rebuilds structurally — not just emotionally.</li>
+          <li><span class="ba-diamond">◈</span>Ситуации высокого давления становятся управляемыми через момент, ответственность и структурное чтение.</li>
+          <li><span class="ba-diamond">◈</span>Человека становится сложнее затянуть в хаос — потому что восприятие стало более организованным.</li>
+        </ul>
+      </div>
+      <div class="ba-foot">
+        <p class="ba-quote">Graskheenics не убирает эмоции. Он убирает ненужный эмоциональный хаос. Он не делает человека менее человечным. Он делает человека менее доступным для искажения.</p>
+        <div class="ba-transforms">
+          <div class="ba-row"><span class="ba-key">Боль</span><span class="ba-val">становится информацией.</span></div>
+          <div class="ba-row"><span class="ba-key">Давление</span><span class="ba-val">становится читаемым.</span></div>
+          <div class="ba-row"><span class="ba-key">Выбор</span><span class="ba-val">становится чище.</span></div>
+          <div class="ba-row"><span class="ba-key">Решение</span><span class="ba-val">становится более реальным.</span></div>
+          <div class="ba-row"><span class="ba-key">Контроль</span><span class="ba-val">возвращается к системе.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 STAGES -->
+<section id="stages">
+  <div class="wrap">
+    <div class="sec-label">Последовательность</div>
+    <h2>8-стадийная<br><em>последовательность GRASCODE</em></h2>
+    <p style="font-size:.88rem;color:var(--grey);max-width:580px;line-height:1.9;margin-top:.6rem;">Каждая стадия — структурная позиция, а не шаг который нужно следовать по порядку. Понимание где находится ситуация и что мешает движению — это фундаментальный навык.</p>
+    <div class="stages-grid">
+      <div class="stage"><div class="stage-n">01</div><div class="stage-l">G</div><div class="stage-name">Pattern</div><div class="stage-desc">Что продолжает повторяться? Что система показывает через рецидив?</div></div>
+      <div class="stage"><div class="stage-n">02</div><div class="stage-l">R</div><div class="stage-name">Mechanism</div><div class="stage-desc">Не то что видно — то что производит видимое.</div></div>
+      <div class="stage"><div class="stage-n">03</div><div class="stage-l">A</div><div class="stage-name">Выбор</div><div class="stage-desc">Структурная развилка. Реальные архитектурные варианты, а не поверхностные предпочтения.</div></div>
+      <div class="stage"><div class="stage-n">04</div><div class="stage-l">S</div><div class="stage-name">Idling</div><div class="stage-desc">Приостановленное движение. Структурная позиция требующая распознавания прежде чем она сможет сдвинуться.</div></div>
+      <div class="stage"><div class="stage-n">05</div><div class="stage-l">C</div><div class="stage-name">Activation</div><div class="stage-desc">Пересечение порога. Может ли система распознать и использовать этот момент?</div></div>
+      <div class="stage"><div class="stage-n">06</div><div class="stage-l">O</div><div class="stage-name">Responsibility</div><div class="stage-desc">Структурное владение — не вина, а авторство того что продолжается вперёд.</div></div>
+      <div class="stage"><div class="stage-n">07</div><div class="stage-l">D</div><div class="stage-name">Решение</div><div class="stage-desc">Архитектурное обязательство с последствиями — не мнение и не произнесённое намерение.</div></div>
+      <div class="stage"><div class="stage-n">08</div><div class="stage-l">E</div><div class="stage-name">Transmission</div><div class="stage-desc">Что система отправляет вперёд. Каждое решение передаёт что-то в следующий цикл.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT HELPS -->
+<section id="helps">
+  <div class="wrap">
+    <div class="sec-label">Применения</div>
+    <h2>Что Graskheenics<br><em>помогает людям делать</em></h2>
+    <div class="helps-grid">
+      <div class="help"><div class="help-dot"></div><div class="help-text">Читать повторяющиеся ситуации без перехода к обвинению, советам или эмоциональной реакции.</div></div>
+      <div class="help"><div class="help-dot"></div><div class="help-text">Понимать застрявшее движение прежде чем форсировать действие которое не соответствует структурной позиции.</div></div>
+      <div class="help"><div class="help-dot"></div><div class="help-text">Отделять эмоциональную реакцию от структурной позиции — и действовать из второй.</div></div>
+      <div class="help"><div class="help-dot"></div><div class="help-text">Распознавать когда решение только произнесено — и когда оно структурно реально.</div></div>
+      <div class="help"><div class="help-dot"></div><div class="help-text">Навигировать сложные ситуации до того как они становятся труднее для восстановления.</div></div>
+      <div class="help"><div class="help-dot"></div><div class="help-text">Улучшать регуляцию под давлением прежде чем она разрушается в реакцию.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LEVEL 1 -->
+<section id="level1">
+  <div class="wrap">
+    <div class="sec-label">Точка входа</div>
+    <div class="level-grid">
+      <div>
+        <span class="level-badge">Уровень 1 · Foundations of Structural Reading</span>
+        <h2 style="margin-top:.5rem;">GRASCODE<br><em>Основа декодирования</em></h2>
+        <p class="body">Первый публичный слой Graskheenics. Обучает распознаванию — способности определить где ситуация находится внутри последовательности GRASCODE и начать читать её структурную логику.</p>
+        <p style="padding:1rem 1.2rem;border-left:3px solid var(--amber);background:rgba(196,134,22,.05);font-size:.88rem;font-style:italic;color:var(--grey);line-height:1.7;margin-bottom:1.4rem;">Уровень 1 is the entry into structural literacy — not the full Graskheenics engine. Practitioner and advanced levels follow.</p>
+        <ul class="include-list">
+          <li>Полная 8-стадийная последовательность GRASCODE с прикладным фреймворком чтения</li>
+          <li>Распознавание паттернов — идентификация повторяющихся структурных сигнатур</li>
+          <li>Идентификация механизмов — чтение логики под видимой поверхностью</li>
+          <li>Распознавание простоя — понимание приостановленного движения как структурной позиции</li>
+          <li>7-дневная практика интеграции — применение к реальным жизненным ситуациям</li>
+          <li>Final Assessment — required for Уровень 1 certification pathway</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price-card">
+          <div class="price">$97</div>
+          <div class="price-note">Единовременно · Доступ на всю жизнь</div>
+          <a class="buy" href="https://afraworld.gumroad.com/l/level1" target="_blank">Begin Уровень 1 →</a>
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,134,22,.45);margin-bottom:.8rem;">Путь сертификации</div>
+          <ul class="cert-steps">
+            <li>Завершить упражнения хэндбука и рабочей тетради</li>
+            <li>Завершить 7-дневную практику интеграции</li>
+            <li>Отправить финальную оценку на research@graskheenics.org</li>
+            <li>Сертификат выдаётся в течение 7 дней</li>
+          </ul>
+          <p class="cert-note">Сертификация основана на продемонстрированном понимании — не только на завершении.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL APPLICATIONS -->
+<section id="professional">
+  <div class="wrap">
+    <div class="sec-label">Professional &amp; Institutional Применения</div>
+    <h2>Где структурная навигация<br><em>становится критически важной</em></h2>
+    <p style="font-size:.9rem;color:var(--grey);max-width:640px;line-height:1.9;margin-bottom:3rem;">Graskheenics был извлечён из выживания под высоким давлением — не разработан в классе. Фреймворк применяется напрямую к профессиональным областям где неверное чтение паттернов, механическая слепота и структурные сбои несут необратимые последствия. Специализированные программы для этих областей в разработке.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:2rem;">
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Авиация</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Передача управления под необратимым ограничением. Чтение траектории до порога. Tafheena напрямую применима к принятию решений в кабине экипажа и протоколам кризиса.</p>
+      </div>
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Хирургия и неотложная медицина</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Момент когда совещательная обработка передаётся встроенной процедурной непрерывности. Идентификация механизмов и чтение паттернов в необратимых хирургических и травматических условиях.</p>
+      </div>
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Автоспорт</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Исходная область. Архитектура давления, чтение траектории и навигация механизмов на скорости — переведённые в обучаемый структурный интеллект применимый за пределами трассы.</p>
+      </div>
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Аварийное реагирование и пожаротушение</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Асимметрия стадий нескольких агентов, классификация механизмов в реальном времени и структурное принятие решений когда условия окружающей среды разрушают известные фреймворки.</p>
+      </div>
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Военная сфера и кризисные переговоры</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Чтение человеческих механизмов во враждебных средах. Идентификация состояний Idling-B и активации под принуждением. Структурная ответственность когда последствия немедленны и постоянны.</p>
+      </div>
+
+      <div style="background:var(--bg2);padding:1.8rem 1.6rem;">
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Управление воздушным движением и ядерные операции</div>
+        <p style="font-size:.84rem;color:var(--grey);line-height:1.7;">Среды с высокими последствиями требующие встроенной регуляции в реальном времени — ASR Уровень 4 — где ошибка невосстановима и распознавание паттернов должно предшествовать событию.</p>
+      </div>
+
+    </div>
+
+    <div style="background:var(--bg3);border:1px solid var(--border);padding:2rem 2.4rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;">
+      <div>
+        <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;">В разработке</div>
+        <p style="font-size:.87rem;color:var(--grey);line-height:1.7;">Специализированные программы для профессиональных и институциональных областей разрабатываются в сотрудничестве с практиками. Если вы работаете в профессиональной среде высоких ставок и хотите изучить применение фреймворка в вашей области — свяжитесь напрямую.</p>
+      </div>
+      <a href="mailto:research@graskheenics.org" style="font-family:var(--mono);font-size:.48rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);border:1px solid var(--border);padding:.75rem 1.4rem;text-decoration:none;white-space:nowrap;transition:all .15s;flex-shrink:0;" onmouseover="this.style.background='rgba(196,134,22,0.08)'" onmouseout="this.style.background='transparent'">Обсудить сотрудничество →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LICENSING -->
+<section id="licensing">
+  <div class="wrap">
+    <div class="sec-label">Certification &amp; Лицензирование</div>
+    <div class="lic-grid">
+      <div>
+        <h2>Получите сертификацию.<br><em>Стройте с полной архитектурой.</em></h2>
+        <p class="body">Official certification and licensing pathways for professionals, educators, coaches, therapists, and organizations who want to integrate the system into their field of expertise.</p>
+        <div class="lic-rule">Полная поддержка в получении архитектуры.<br>VIP и премиум доступ.<br>Лицензирование напрямую от автора.</div>
+        <p class="body">Сертифицированные практики получают полное разрешение на применение системы Graskheenics в рамках их профессиональной деятельности — с постоянным доступом, поддержкой и признанием в рамках официальной сети.</p>
+        <a class="lic-btn" href="mailto:research@graskheenics.org">Apply for Certification &amp; Лицензирование</a>
+      </div>
+      <div>
+        <h2 style="font-size:1.8rem;">Для инвесторов<br><em>и спонсоров</em></h2>
+        <p class="body">Graskheenics Школа is at its founding stage. The framework is published, Уровень 1 is live, and the practitioner pathway is in development.</p>
+        <p class="body">Организации и частные лица которые хотят поддержать глобальное развитие школы — через инвестиции, партнёрство или институциональную интеграцию — могут обращаться напрямую.</p>
+        <p style="font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--amber);line-height:1.7;margin-top:1.2rem;">"This is the first school of its kind.<br>The architecture belongs to one source.<br>Лицензирование comes from that source alone."</p>
+        <a class="lic-btn" href="mailto:research@graskheenics.org" style="margin-top:.6rem;">Запросы инвесторов и спонсоров</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGIN -->
+<section id="origin">
+  <div class="wrap">
+    <div class="sec-label">Происхождение</div>
+
+    <!-- TIMELINE -->
+    <div style="display:grid;grid-template-columns:120px 1fr;gap:0;margin-bottom:4rem;">
+
+      <!-- LAYER 1: FATHER -->
+      <div style="display:contents;">
+        <div style="padding:0 2rem 3rem 0;text-align:right;border-right:1px solid var(--border);">
+          <div style="font-family:var(--serif);font-size:2.8rem;color:rgba(196,134,22,.12);line-height:1;letter-spacing:-.02em;">До<br>1990</div>
+        </div>
+        <div style="padding:0 0 3rem 2.5rem;border-bottom:1px solid var(--border2);">
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Основание</div>
+          <p style="font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(238,234,226,.65);line-height:1.7;margin-bottom:.8rem;">Врач — десять лет университетской подготовки — и практикующий психотерапевт и гипнотерапевт работавший со сложными случаями которые большинство гипнотерапевтов не могут достичь. Он не преподавал саморегуляцию как предмет. Он жил ею как дисциплиной и передавал как практику. Ему было 44 года когда его убили.</p>
+          <p style="font-size:.86rem;color:rgba(176,168,152,.55);line-height:1.85;">Его студенты не опаздывали на занятия. Не потому что им говорили — потому что работа внутри комнаты делала приход раньше ощущаемым необходимым. То что он преподавал нельзя было свести к информации. Это требовало присутствия, внимания и системы готовой учиться изнутри опыта.</p>
+          <p style="font-size:.86rem;color:rgba(176,168,152,.55);line-height:1.85;">Здесь начинается интеллектуальная родословная Graskheenics — не в 2025 году, а в той практике, в семье где саморегуляция была не концепцией для изучения а дисциплиной для проживания.</p>
+        </div>
+      </div>
+
+      <!-- LAYER 2: LIVED EXPERIENCE -->
+      <div style="display:contents;">
+        <div style="padding:3rem 2rem 3rem 0;text-align:right;border-right:1px solid var(--border);">
+          <div style="font-family:var(--serif);font-size:2.8rem;color:rgba(196,134,22,.12);line-height:1;letter-spacing:-.02em;">1990–<br>2024</div>
+        </div>
+        <div style="padding:3rem 0 3rem 2.5rem;border-bottom:1px solid var(--border2);">
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Извлечение</div>
+          <p class="origin-quote" style="margin-bottom:.8rem;">"Я построила этот движок потому что у меня не было выбора. Я извлекла его через более чем тридцать лет выживания в трёх цивилизациях, нелегальные гонки, предательство, бездомность и повторное восстановление жизни под экстремальным давлением."</p>
+          <p style="font-size:.86rem;color:rgba(176,168,152,.55);line-height:1.85;">Казахстан. ОАЭ — 16 лет. Япония. Первая женщина исполнившая фристайл-дрифт на внедорожнике в регионе GCC. Три страны. Три полные реинтеграции. Фреймворк не был разработан заранее — он был извлечён из паттернов которые продолжали повторяться под реальным давлением и из осознания что существующие системы не имели языка для того что реально происходило.</p>
+        </div>
+      </div>
+
+      <!-- LAYER 3: FORMALIZATION -->
+      <div style="display:contents;">
+        <div style="padding:3rem 2rem 0 0;text-align:right;border-right:1px solid var(--border);">
+          <div style="font-family:var(--serif);font-size:2.8rem;color:rgba(196,134,22,.18);line-height:1;letter-spacing:-.02em;">2025–<br>now</div>
+        </div>
+        <div style="padding:3rem 0 0 2.5rem;">
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem;">Формализация</div>
+          <p style="font-size:.86rem;color:rgba(176,168,152,.6);line-height:1.85;margin-bottom:1.2rem;">Академические препринты опубликованы на Zenodo. Пятнадцать книг документирующих систему. Архитектура GRASCODE формализована. Школа открыта впервые.</p>
+          <div class="creds">
+            <span class="cred">ORCID 0009-0002-3004-9502</span>
+            <span class="cred">15 опубликованных книг</span>
+            <span class="cred">Открытые исследования: graskheenics.org</span>
+            <span class="cred">Yuliana Grasman · Afra</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI DISCLOSURE -->
+<section id="disclosure" style="background:var(--bg3);">
+  <div class="wrap">
+    <div class="sec-label">Автор Происхождение &amp; AI Disclosure</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+
+      <div>
+        <h2 style="font-size:2.2rem;">AI может организовать язык.<br><em>Он не может создать последствие.</em></h2>
+        <p style="font-size:.9rem;color:var(--grey);line-height:1.9;margin-top:1.2rem;">Graskheenics, GRASCODE, Tafheena и связанные фреймворки не были сгенерированы искусственным интеллектом. Они происходят из прожитого человеческого опыта, воплощённого распознавания паттернов, реального давления, последствий, выживания, миграции и документированной жизненной истории — задолго до того как инструменты AI сыграли какую-либо роль в работе автора.</p>
+        <p style="font-size:.9rem;color:var(--grey);line-height:1.9;margin-top:.8rem;">Инструменты AI использовались для помощи с организацией, форматированием, грамматикой и обеспечением видимости и обучаемости фреймворка. Термины, протоколы, стадии, логика и основная архитектура происходят из прожитого опыта — проверенного через реальные человеческие последствия прежде чем они были когда-либо записаны.</p>
+        <div style="border-left:2px solid var(--amber);padding-left:1.4rem;margin:2rem 0;">
+          <p style="font-family:var(--serif);font-size:1.2rem;font-style:italic;color:rgba(238,234,226,.7);line-height:1.7;">Фреймворк был прожит прежде чем был написан.<br>Он был проверен прежде чем был назван.<br>Он работал прежде чем стал обучаемым.</p>
+        </div>
+        <p style="font-size:.9rem;color:var(--grey);line-height:1.9;">Оригинальность автора подтверждается документированной историей, архивными записями, опубликованными книгами, интервью и многократным применением этого воплощённого фреймворка в реальных ситуациях на протяжении десятилетий. Ни один AI в мире не несёт последствий которые построили эту систему.</p>
+      </div>
+
+      <div>
+        <div style="background:var(--bg2);border:1px solid var(--border);padding:2rem;margin-bottom:1.5rem;">
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">Отказ от ответственности в областях высоких последствий</div>
+          <p style="font-size:.84rem;color:var(--grey);line-height:1.8;margin-bottom:.9rem;">Ссылки на авиацию, хирургию, аварийное реагирование, военную сферу и другие области высоких ставок используются для структурного анализа, моделирования человеческих границ и архитектуры решений — а не как замена профессиональной сертификации, операционных протоколов, институционального обучения или специфических правовых и стандартов безопасности.</p>
+          <p style="font-size:.84rem;color:var(--grey);line-height:1.8;">Любое применение в профессиональных областях высоких последствий требует надлежащего профессионального надзора, этической проверки и соответствия специфике области. Graskheenics не заменяет экспертные системы. Он изучает человеческую границу где давление, момент, ответственность и принятие решений встречают последствие.</p>
+        </div>
+
+        <div style="background:var(--bg2);border:1px solid var(--border);padding:2rem;">
+          <div style="font-family:var(--mono);font-size:.42rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem;">Фреймворк границы человек–AI</div>
+          <p style="font-size:.84rem;color:var(--grey);line-height:1.8;">Автор опубликовал оригинальные исследования об условиях границы человек–AI и этических фреймворках для AI-систем в средах несущих последствия. Датировано и задокументировано. Полный движок остаётся защищённым. Избранные статьи доступны в открытом доступе.</p>
+          <a href="https://graskheenics.org" style="font-family:var(--mono);font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);text-decoration:none;border-bottom:1px solid rgba(196,134,22,.3);padding-bottom:1px;display:inline-block;margin-top:.8rem;">Смотреть открытые исследования →</a>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:.42rem;letter-spacing:.1em;text-transform:uppercase;color:var(--low);margin-top:1.2rem;line-height:1.8;">AI-ассистированная организация. Не авторство сгенерированное AI.<br>Источник — последствие. Источник — человек.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-logo">Graskheenics Школа</div>
+      <p class="foot-note">© 2026 Yuliana Grasman. GRASCODE™ and Graskheenics™ are trademarks of the author.<br>research@graskheenics.org · graskheenics.org</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
